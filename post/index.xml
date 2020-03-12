@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>minu前端学习记录</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on minu前端学习记录</description>
+    <title>Posts on minu前端学习记录</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content in Posts on minu前端学习记录</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 12 Mar 2020 21:03:56 +0800</lastBuildDate>
     
-        <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,11 +17,7 @@
       <pubDate>Thu, 12 Mar 2020 21:03:56 +0800</pubDate>
       
       <guid>http://localhost:1313/post/test/</guid>
-      
-        <description>&lt;p&gt;今天我寒夜里看雪飘过，怀着冷却了的心窝飘远方!!!!&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-javascrpit&#34; data-lang=&#34;javascrpit&#34;&gt;console.log(&amp;quot;hello world&amp;quot;);
-&lt;/code&gt;&lt;/pre&gt;</description>
-      
+      <description>今天我寒夜里看雪飘过，怀着冷却了的心窝飘远方!!!! console.log(&amp;quot;hello world&amp;quot;);</description>
     </item>
     
     <item>
@@ -30,11 +26,7 @@
       <pubDate>Thu, 12 Mar 2020 21:03:56 +0800</pubDate>
       
       <guid>http://localhost:1313/posts/test/</guid>
-      
-        <description>&lt;p&gt;今天我寒夜里看雪飘过，怀着冷却了的心窝飘远方!!!!&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-javascrpit&#34; data-lang=&#34;javascrpit&#34;&gt;console.log(&amp;quot;hello world&amp;quot;);
-&lt;/code&gt;&lt;/pre&gt;</description>
-      
+      <description>今天我寒夜里看雪飘过，怀着冷却了的心窝飘远方!!!! console.log(&amp;quot;hello world&amp;quot;);</description>
     </item>
     
     <item>
@@ -43,12 +35,7 @@
       <pubDate>Thu, 12 Mar 2020 17:01:17 +0800</pubDate>
       
       <guid>http://localhost:1313/post/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</guid>
-      
-        <description>&lt;p&gt;以后我会在这里记录前端学习的心得&lt;/p&gt;
-&lt;p&gt;多做总结，才会进步&lt;/p&gt;
-&lt;h1 id=&#34;好嗨哟&#34;&gt;好嗨哟&lt;/h1&gt;
-</description>
-      
+      <description>以后我会在这里记录前端学习的心得 多做总结，才会进步 好嗨哟</description>
     </item>
     
     <item>
@@ -57,12 +44,7 @@
       <pubDate>Thu, 12 Mar 2020 17:01:17 +0800</pubDate>
       
       <guid>http://localhost:1313/posts/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</guid>
-      
-        <description>&lt;p&gt;以后我会在这里记录前端学习的心得&lt;/p&gt;
-&lt;p&gt;多做总结，才会进步&lt;/p&gt;
-&lt;h1 id=&#34;好嗨哟&#34;&gt;好嗨哟&lt;/h1&gt;
-</description>
-      
+      <description>以后我会在这里记录前端学习的心得 多做总结，才会进步 好嗨哟</description>
     </item>
     
   </channel>
