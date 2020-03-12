@@ -23,14 +23,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/posts/%E8%BF%99%E4%B8%AA%E6%98%AF%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98ananke%E7%9A%84%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95/</loc>
-    <lastmod>2020-03-12T21:03:56+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/post/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</loc>
+    <loc>http://localhost:1313/post/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</loc>
     <lastmod>2020-03-12T17:01:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

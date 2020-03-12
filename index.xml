@@ -77,24 +77,11 @@
     </item>
     
     <item>
-      <title>test 第二篇文章</title>
-      <link>http://localhost:1313/posts/%E8%BF%99%E4%B8%AA%E6%98%AF%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98ananke%E7%9A%84%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95/</link>
-      <pubDate>Thu, 12 Mar 2020 21:03:56 +0800</pubDate>
-      
-      <guid>http://localhost:1313/posts/%E8%BF%99%E4%B8%AA%E6%98%AF%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98ananke%E7%9A%84%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95/</guid>
-      
-        <description>&lt;p&gt;今天我寒夜里看雪飘过，怀着冷却了的心窝飘远方!!!!&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-javascrpit&#34; data-lang=&#34;javascrpit&#34;&gt;console.log(&amp;quot;hello world&amp;quot;);
-&lt;/code&gt;&lt;/pre&gt;</description>
-      
-    </item>
-    
-    <item>
       <title>开博大吉</title>
-      <link>http://localhost:1313/post/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</link>
+      <link>http://localhost:1313/post/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</link>
       <pubDate>Thu, 12 Mar 2020 17:01:17 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</guid>
+      <guid>http://localhost:1313/post/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</guid>
       
         <description>&lt;p&gt;以后我会在这里记录前端学习的心得&lt;/p&gt;
 &lt;p&gt;多做总结，才会进步&lt;/p&gt;
