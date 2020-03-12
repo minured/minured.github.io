@@ -69,7 +69,7 @@
 <meta itemprop="description" content="下面是windows用户hugo搭建博客的步骤： 1. 安装hugo windows用户直接下载压缩包，解压缩之后把hugo的目录添加到环境变量 2. 创">
 <meta itemprop="datePublished" content="2020-03-12T23:21:23&#43;08:00" />
 <meta itemprop="dateModified" content="2020-03-12T23:21:23&#43;08:00" />
-<meta itemprop="wordCount" content="433">
+<meta itemprop="wordCount" content="434">
 
 
 
@@ -368,15 +368,9 @@
         <li><a href="#3-下载主题">3. 下载主题</a></li>
         <li><a href="#4-新建文章">4. 新建文章</a></li>
         <li><a href="#5-运行本地服务器">5. 运行本地服务器</a></li>
+        <li><a href="#6-部署到github">6. 部署到github</a></li>
       </ul>
     </li>
-    <li><a href="#至此本地网站已生成可以通过-httplocalhost1313进行访问">至此，本地网站已生成，可以通过 <code>http://localhost:1313/</code>进行访问</a></li>
-    <li><a href="#下面把网站部署到github">下面把网站部署到github</a>
-      <ul>
-        <li><a href="#6-部署public">6. 部署public</a></li>
-      </ul>
-    </li>
-    <li><a href="#大功告成现在可以通过yournamegithubio访问你的博客">大功告成，现在可以通过<code>yourname.github.io</code>访问你的博客</a></li>
   </ul>
 </nav>
   </div>
@@ -403,11 +397,11 @@
 <h3 id="5-运行本地服务器">5. 运行本地服务器</h3>
 <p><code>hugo server -D</code>
 -D 参数可选，表示将草稿放上服务器</p>
-<h2 id="至此本地网站已生成可以通过-httplocalhost1313进行访问">至此，本地网站已生成，可以通过 <code>http://localhost:1313/</code>进行访问</h2>
-<h2 id="下面把网站部署到github">下面把网站部署到github</h2>
-<h3 id="6-部署public">6. 部署public</h3>
-<p><code>hugo</code>
-会生成一个public文件夹，待上传到github</p>
+<p>至此，本地网站已生成，可以通过 <code>http://localhost:1313/</code>进行访问
+下面把网站部署到github</p>
+<h3 id="6-部署到github">6. 部署到github</h3>
+<p><code>hugo</code></p>
+<p>会生成一个public文件夹，待上传到github</p>
 <p>myblog仓库隐藏public,public建立git仓库</p>
 <p><code>echo -e &quot;/public&quot; &gt;&gt; .gitignore</code></p>
 <p><code>cd public</code></p>
@@ -417,7 +411,7 @@
 <p>在github建立新仓库。名为<code>yourname.github.io</code></p>
 <p><code>git remote add origin xxx</code></p>
 <p><code>git push -u origin master</code></p>
-<h2 id="大功告成现在可以通过yournamegithubio访问你的博客">大功告成，现在可以通过<code>yourname.github.io</code>访问你的博客</h2>
+<p>大功告成，现在可以通过<code>yourname.github.io</code>访问你的博客</p>
 
     </div>
 

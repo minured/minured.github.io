@@ -57,11 +57,11 @@
 &lt;h3 id=&#34;5-运行本地服务器&#34;&gt;5. 运行本地服务器&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;hugo server -D&lt;/code&gt;
 -D 参数可选，表示将草稿放上服务器&lt;/p&gt;
-&lt;h2 id=&#34;至此本地网站已生成可以通过-httplocalhost1313进行访问&#34;&gt;至此，本地网站已生成，可以通过 &lt;code&gt;http://localhost:1313/&lt;/code&gt;进行访问&lt;/h2&gt;
-&lt;h2 id=&#34;下面把网站部署到github&#34;&gt;下面把网站部署到github&lt;/h2&gt;
-&lt;h3 id=&#34;6-部署public&#34;&gt;6. 部署public&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;hugo&lt;/code&gt;
-会生成一个public文件夹，待上传到github&lt;/p&gt;
+&lt;p&gt;至此，本地网站已生成，可以通过 &lt;code&gt;http://localhost:1313/&lt;/code&gt;进行访问
+下面把网站部署到github&lt;/p&gt;
+&lt;h3 id=&#34;6-部署到github&#34;&gt;6. 部署到github&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;hugo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;会生成一个public文件夹，待上传到github&lt;/p&gt;
 &lt;p&gt;myblog仓库隐藏public,public建立git仓库&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;echo -e &amp;quot;/public&amp;quot; &amp;gt;&amp;gt; .gitignore&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;cd public&lt;/code&gt;&lt;/p&gt;
@@ -71,7 +71,7 @@
 &lt;p&gt;在github建立新仓库。名为&lt;code&gt;yourname.github.io&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git remote add origin xxx&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git push -u origin master&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&#34;大功告成现在可以通过yournamegithubio访问你的博客&#34;&gt;大功告成，现在可以通过&lt;code&gt;yourname.github.io&lt;/code&gt;访问你的博客&lt;/h2&gt;
+&lt;p&gt;大功告成，现在可以通过&lt;code&gt;yourname.github.io&lt;/code&gt;访问你的博客&lt;/p&gt;
 </description>
       
     </item>
