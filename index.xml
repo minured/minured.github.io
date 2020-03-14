@@ -32,6 +32,70 @@
     </item>
     
     <item>
+      <title>Html入门笔记1</title>
+      <link>http://localhost:1313/post/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</link>
+      <pubDate>Sat, 14 Mar 2020 22:54:16 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</guid>
+      
+        <description>&lt;h3 id=&#34;html-是谁发明的&#34;&gt;html 是谁发明的&lt;/h3&gt;
+&lt;p&gt;HTML（Hypertext Marked Language，超文本标记语言）是由 Web 的发明者 Tim Berners-Lee 和同事 Daniel W. Connolly 于 1990 年创立的一种标记语言，它是标准通用化标记语言 SGML 的应用。&lt;/p&gt;
+&lt;h3 id=&#34;html-起手式应该写什么&#34;&gt;html 起手式应该写什么&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- 文档类型 --&amp;gt;
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;!-- html标签 --&amp;gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;!-- head，页面信息，看不见的内容 --&amp;gt;
+  &amp;lt;head lang=&amp;quot;zh-CN&amp;quot;&amp;gt;
+    &amp;lt;!-- 字符编码 --&amp;gt;
+    &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot; /&amp;gt;
+    &amp;lt;!-- 视口，内容宽度等于设备屏幕宽度，缩放比例为1 --&amp;gt;
+    &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot; /&amp;gt;
+    &amp;lt;!-- ie浏览器使用最新的渲染模式 --&amp;gt;
+    &amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;ie=edge&amp;quot; /&amp;gt;
+    &amp;lt;title&amp;gt;
+      网页标题
+    &amp;lt;/title&amp;gt;
+  &amp;lt;/head&amp;gt;
+  &amp;lt;!-- 网页显示内容 --&amp;gt;
+  &amp;lt;body&amp;gt;
+    内容
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;常用的表示章节的标签&#34;&gt;常用的表示章节的标签&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;h1~h6&lt;/code&gt; 六级标题&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;section&lt;/code&gt; 章节、部分&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;article&lt;/code&gt; 文章&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;main&lt;/code&gt; 主要内容&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aside&lt;/code&gt; 次要内容，侧边栏&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;header&lt;/code&gt; 页眉，头部&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;footer&lt;/code&gt; 页脚，尾部&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nav&lt;/code&gt; 导航栏&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;全局属性&#34;&gt;全局属性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;class&lt;/code&gt; 类&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;id&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hidden&lt;/code&gt; 隐藏元素&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;contenteditable&lt;/code&gt; 内容可编辑&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;style&lt;/code&gt; 写 css 的属性&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tabindex&lt;/code&gt; 指定 tab 键选中顺序&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;title&lt;/code&gt; 鼠标放上去显示的文本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;常用的内容标签&#34;&gt;常用的内容标签&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;a&lt;/code&gt; 超链接&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;strong&lt;/code&gt; 重要，内容本身重要&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;em&lt;/code&gt; 强调，语气强调&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;code&lt;/code&gt; 写代码，默认使用等宽字体&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pre&lt;/code&gt; 保留全部空格和回车&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>如何用hugo搭建个人博客</title>
       <link>http://localhost:1313/post/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Thu, 12 Mar 2020 23:21:23 +0800</pubDate>
