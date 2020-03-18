@@ -32,6 +32,147 @@
     </item>
     
     <item>
+      <title>HTML常用标签</title>
+      <link>http://localhost:1313/post/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Tue, 17 Mar 2020 22:55:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</guid>
+      
+        <description>&lt;h2 id=&#34;a-标签&#34;&gt;a 标签&lt;/h2&gt;
+&lt;h3 id=&#34;作用&#34;&gt;作用&lt;/h3&gt;
+&lt;p&gt;anchor 用于超链接，跳转外部页面，跳转内部锚点（#id），跳转邮箱或电话等（mailto:xx@xx.xx;tel:12345678910）&lt;/p&gt;
+&lt;h3 id=&#34;属性&#34;&gt;属性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;href&lt;/p&gt;
+&lt;p&gt;1、使用无协议写法&lt;code&gt;href = &amp;quot;//google.com&amp;quot;&lt;/code&gt;，协议会继承自当前网页协议。&lt;/p&gt;
+&lt;p&gt;2、使用路径的时候，&lt;code&gt;/&lt;/code&gt;指的是 http 开启位置的根目录&lt;/p&gt;
+&lt;p&gt;3、使用伪协议&lt;code&gt;href = &amp;quot;javascript:;&lt;/code&gt;屏蔽 a 标签的默认跳转行为，可以用来触发其他操作&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;target&lt;/p&gt;
+&lt;p&gt;1、&lt;code&gt;_blank&lt;/code&gt; 新标签打开&lt;/p&gt;
+&lt;p&gt;2、&lt;code&gt;iframe&lt;/code&gt; 已经很多使用(&lt;code&gt;_top&lt;/code&gt; 在最外层窗口打开，&lt;code&gt;_parent&lt;/code&gt; 在父窗口打开，&lt;code&gt;_self&lt;/code&gt; 在当前窗口打开)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;rel&lt;/p&gt;
+&lt;p&gt;1、用于指定当前文档与被链接文档之间的关系&lt;/p&gt;
+&lt;p&gt;2、&lt;code&gt;rel = noopener&lt;/code&gt;：但 a 标签使用&lt;code&gt;target = _blank&lt;/code&gt;时，新标签可以通过&lt;code&gt;window.opener&lt;/code&gt;访问原标签，原标签可能会被改变；使用了&lt;code&gt;rel = noopener&lt;/code&gt;就可以阻止&lt;code&gt;window.opener&lt;/code&gt;，不能进行跨窗口访问。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;img-标签&#34;&gt;img 标签&lt;/h2&gt;
+&lt;p&gt;发出 get 请求，显示一张图片&lt;/p&gt;
+&lt;h3 id=&#34;属性-1&#34;&gt;属性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;alt&lt;/code&gt; 图片加载失败时显示的文字&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;height、width&lt;/code&gt;指定图片宽高，指定其中一个的时候，另一个会按比例自适应，这两个是 img 的属性，不是 CSS，注意区别&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;src&lt;/code&gt; 图片的地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;事件&#34;&gt;事件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;onload 图片加载成功的时候触发&lt;/li&gt;
+&lt;li&gt;onerror 图片加载失败的时候触发，图片加载失败时，可以用其他图片来代替，以提升用户体验&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;响应式&#34;&gt;响应式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;max-width:100%&lt;/code&gt;最大宽度为窗口的宽度，实现响应式的显示。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;可替换元素&#34;&gt;可替换元素&lt;/h3&gt;
+&lt;p&gt;replaced element 是一种外部对象，CSS 只能控制其位置，不能控制其内容。
+常见的可替换元素有&lt;code&gt;iframe&lt;/code&gt;、&lt;code&gt;video&lt;/code&gt;、&lt;code&gt;embed&lt;/code&gt;、&lt;code&gt;img&lt;/code&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;table-标签&#34;&gt;table 标签&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;table 只能写三个直接子标签&lt;code&gt;thead&lt;/code&gt;、&lt;code&gt;tbody&lt;/code&gt;、&lt;code&gt;tfoot&lt;/code&gt;，下一级是&lt;code&gt;tr&lt;/code&gt;，再下一级是&lt;code&gt;th&lt;/code&gt;、&lt;code&gt;td&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;做表格应该一行一行写&lt;/li&gt;
+&lt;li&gt;表格一般写这两行去除默认的样式：&lt;code&gt;border-collapse:collapse&lt;/code&gt;合并相邻的边框;&lt;code&gt;border-spacing:0&lt;/code&gt;边框的间隔为零。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;table-layout&lt;/code&gt;指定表格行列的大小的算法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;感想&#34;&gt;感想&lt;/h3&gt;
+&lt;p&gt;标签太多了，要多练习运用才能记得住，不然隔一段时间就会忘记，特别是 input 标签的类型很多，应该每个都写一个实例帮助记忆。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>3月17复习</title>
+      <link>http://localhost:1313/post/3.17%E5%A4%8D%E4%B9%A0/</link>
+      <pubDate>Tue, 17 Mar 2020 21:49:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/3.17%E5%A4%8D%E4%B9%A0/</guid>
+      
+        <description>&lt;h3 id=&#34;文件的增删改查&#34;&gt;文件的增删改查&lt;/h3&gt;
+&lt;p&gt;1、文件的查看&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;~&lt;/code&gt; 表示用户目录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.&lt;/code&gt; 表示当前目录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;..&lt;/code&gt; 表示上级目录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/&lt;/code&gt; 代表根目录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pwd&lt;/code&gt; 查看当前目录（process word directory 进程目录）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ls&lt;/code&gt; 显示当前目录的所有文件（ls 路径）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ls -1&lt;/code&gt; 每行显示一个&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ls -a&lt;/code&gt; 显示所有文件，包括隐藏文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ls -l&lt;/code&gt; 查看文件的详细信息，还可以写为 &lt;code&gt;ll&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cat&lt;/code&gt; 显示文件的内容&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;less&lt;/code&gt; 分页显示文件内容&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;head&lt;/code&gt; 默认显示文件内容的前十行，可以添加参数 &lt;code&gt;-n 8&lt;/code&gt;显示文件的前 8 行&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tail&lt;/code&gt; 同理 head 显示内容的后十行
+2、文件的增加&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;touch&lt;/code&gt; 如果文件不存在，新建一个文件；如果文件存在，则刷新文件的最后更新时间&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;echo&lt;/code&gt; 向文件写入内容， &lt;code&gt;&amp;gt;&lt;/code&gt; 覆盖写入；&lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt; 追加写入&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mkdir&lt;/code&gt; 创建文件夹，如果文件夹存在，则会失败&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;不熟练的知识点&#34;&gt;不熟练的知识点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;mv&lt;/code&gt; 除了移动文件，还可以重命名文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ls --help&lt;/code&gt; 查看帮助，其他命令同理&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;echo $?&lt;/code&gt; 查看上一个命令命令执行的结果，一般 0 是成功，1 是失败&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;bash 中，&lt;code&gt;alt + .&lt;/code&gt; 输入上次输入的内容&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;把命令写到一个文件当中，然后&lt;code&gt;sh mybash&lt;/code&gt;就可以指执行 mybash，文件中，还可以使用$1、$2、$3 来传参&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;npm cnpm npx yarn&lt;/code&gt; 都是包管理工具，用来管理 js 的代码库&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用 git 的步骤，先六条命令配置 git（包括邮箱、用户名、默认编辑器等等），然后 git init 初始化，git add ,git commit, 初次提交绑定远程仓库 git remote origin add xxx；git -u origin master&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;git reflog 查看详细记录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;git reset &amp;ndash;hard xxx 版本切换&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;git branch x 创建 x 分支&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;git checkout x 切换 x 分支&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;git pull 是将远程仓库的改动下载到本地仓库&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;git merge 合并分支&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ssh-keygen -t rsa -b 4096 就可以在本地创建公钥和私钥，把公钥添加到 github 就可以通过 ssh 访问远程仓库，&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Html入门笔记1</title>
       <link>http://localhost:1313/post/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</link>
       <pubDate>Sat, 14 Mar 2020 22:54:16 +0800</pubDate>

@@ -9,14 +9,28 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</loc>
-    <lastmod>2020-03-14T22:54:16+08:00</lastmod>
+    <loc>http://localhost:1313/post/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</loc>
+    <lastmod>2020-03-17T22:55:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/</loc>
+    <lastmod>2020-03-17T22:55:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/3.17%E5%A4%8D%E4%B9%A0/</loc>
+    <lastmod>2020-03-17T21:49:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</loc>
     <lastmod>2020-03-14T22:54:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
