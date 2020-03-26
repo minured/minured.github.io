@@ -32,6 +32,43 @@
     </item>
     
     <item>
+      <title>浅析URL</title>
+      <link>http://localhost:1313/post/%E6%B5%85%E6%9E%90url/</link>
+      <pubDate>Thu, 26 Mar 2020 21:13:15 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E6%B5%85%E6%9E%90url/</guid>
+      
+        <description>&lt;h3 id=&#34;1url的组成&#34;&gt;1、URL的组成&lt;/h3&gt;
+&lt;p&gt;uniform resource locator 统一资源定位符&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;协议：规定了客户端与服务器通讯的协议&lt;/li&gt;
+&lt;li&gt;域名或者ip：指定了服务器的网络位置&lt;/li&gt;
+&lt;li&gt;路径：指定了要访问的资源的存放路径&lt;/li&gt;
+&lt;li&gt;查询参数：指定了服务器返回的内容，用于搜索、查询内容，指定页数等等&lt;/li&gt;
+&lt;li&gt;锚点：本地页面某区域的定位和跳转，不包含在请求中。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2dns&#34;&gt;2、DNS&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Domain Name System 域名系统，主要用于域名与 IP 地址的相互转换，以及控制因特网的电子邮件的发送。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nslookup baidu.com&lt;/code&gt; 就可以查询baidu.com对应的ip地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3ipping&#34;&gt;3、IP/ping&lt;/h3&gt;
+&lt;p&gt;IP（Internet Protocol）网际互连协议，用来标记设备在网络中的位置。&lt;/p&gt;
+&lt;p&gt;ping（Packet Internet Groper），因特网包探索器，用于测试网络连接量的程序。&lt;/p&gt;
+&lt;p&gt;ping用于确定本地主机是否能与另一台主机成功交换(发送与接收)数据包，再根据返回的信息，就可以推断TCP/IP参数是否设置正确，以及运行是否正常、网络是否通畅等。&lt;/p&gt;
+&lt;p&gt;用法：&lt;code&gt;ping baidu.com&lt;/code&gt; ，注意ping不成功也有可能是服务器拒绝ping&lt;/p&gt;
+&lt;h3 id=&#34;4域名&#34;&gt;4、域名&lt;/h3&gt;
+&lt;p&gt;Domain Name，域名通过dns映射为ip，这样就可以通过域名访问服务器，比起ip，方便记忆和传播。&lt;/p&gt;
+&lt;p&gt;域名分级：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;顶级域名就是一级域名，&lt;code&gt;.com&lt;/code&gt;  &lt;code&gt;.cn&lt;/code&gt;  &lt;code&gt;.org&lt;/code&gt;等，&lt;code&gt;zhihu.com&lt;/code&gt;是二级域名。&lt;/li&gt;
+&lt;li&gt;但是，我们习惯上把&lt;code&gt;qq.com&lt;/code&gt;称为一级域名，把&lt;code&gt;pvp.qq.com&lt;/code&gt;称为二级域名。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>HTML常用标签</title>
       <link>http://localhost:1313/post/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</link>
       <pubDate>Tue, 17 Mar 2020 22:55:00 +0800</pubDate>
