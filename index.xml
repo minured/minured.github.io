@@ -32,6 +32,40 @@
     </item>
     
     <item>
+      <title>CSS知识总结</title>
+      <link>http://localhost:1313/post/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Sun, 29 Mar 2020 21:05:37 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</guid>
+      
+        <description>&lt;h2 id=&#34;浏览器的渲染原理&#34;&gt;浏览器的渲染原理&lt;/h2&gt;
+&lt;h3 id=&#34;渲染流程&#34;&gt;渲染流程:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;根据 html 生成 DOM 节点树&lt;/li&gt;
+&lt;li&gt;根据 CSS 生成 CSSOM&lt;/li&gt;
+&lt;li&gt;合并 html 和 CSS，生成待渲染的树&lt;/li&gt;
+&lt;li&gt;layout 确定布局，计算大小和位置&lt;/li&gt;
+&lt;li&gt;paint 绘制上色、阴影等&lt;/li&gt;
+&lt;li&gt;composite 合并图层，根据层叠关系展示画面&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;画面更新流程&#34;&gt;画面更新流程：&lt;/h3&gt;
+&lt;p&gt;1、layout =&amp;gt; paint =&amp;gt; composite&lt;/p&gt;
+&lt;p&gt;2、paint =&amp;gt; composite&lt;/p&gt;
+&lt;p&gt;3、composite&lt;/p&gt;
+&lt;p&gt;三个流程，不同属性、不同浏览器有不同，流程越少性能越好，具体查&lt;a href=&#34;https://csstriggers.com/&#34;&gt;csstriggers.com&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;css-动画的两种做法&#34;&gt;CSS 动画的两种做法&lt;/h2&gt;
+&lt;h3 id=&#34;transition&#34;&gt;transition&lt;/h3&gt;
+&lt;p&gt;作用是两个关键帧之间添加过渡效果，限制是只能两个关键帧，也可以通过监听中间节点来达到多次变化，但是麻烦。&lt;/p&gt;
+&lt;h3 id=&#34;animation&#34;&gt;animation&lt;/h3&gt;
+&lt;p&gt;通过&lt;code&gt;@keyframes&lt;/code&gt;可以设置多个关键帧，还可以定义循环次数，方向，暂停等等，功能强大。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;学完这课就是把基本的常用动画过了一遍，详细的还要看 MDN 文档，还有就是要多写，记住一些常用的例子以及一些坑。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>浅析URL</title>
       <link>http://localhost:1313/post/%E6%B5%85%E6%9E%90url/</link>
       <pubDate>Thu, 26 Mar 2020 21:13:15 +0800</pubDate>

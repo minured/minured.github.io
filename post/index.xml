@@ -6,10 +6,19 @@
     <description>Recent content in Posts on minu前端学习记录</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 26 Mar 2020 21:13:15 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 29 Mar 2020 21:05:37 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CSS知识总结</title>
+      <link>http://localhost:1313/post/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Sun, 29 Mar 2020 21:05:37 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</guid>
+      <description>浏览器的渲染原理 渲染流程: 根据 html 生成 DOM 节点树 根据 CSS 生成 CSSOM 合并 html 和 CSS，生成待渲染的树 layout 确定布局，计算大小和位置 paint 绘制上色、阴影等 composite 合并图层</description>
+    </item>
     
     <item>
       <title>浅析URL</title>
