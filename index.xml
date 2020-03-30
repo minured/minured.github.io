@@ -32,6 +32,30 @@
     </item>
     
     <item>
+      <title>JavaScript的诞生</title>
+      <link>http://localhost:1313/post/javascript%E7%9A%84%E8%AF%9E%E7%94%9F/</link>
+      <pubDate>Mon, 30 Mar 2020 19:43:38 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/javascript%E7%9A%84%E8%AF%9E%E7%94%9F/</guid>
+      
+        <description>&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; 1994 年底，网景公司发布了 navigator 0.9 版本，迅速占领市场，轰动一时。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; 但是当时的浏览器只能看，并不能跟访问者交互。网景需一种网页脚本语言，使得浏览器可以与网页互动，当时网景有两个选择，一个是采用现有的语言，一个是发明一种新的语言。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; 1995 年 sun 公司正式推出 Java，声称这种语言可以“一次编写，到处运行”。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; 网景看中了 Java，并和 sun 公司勾搭，允许 Java 以 applet（小程序）的形式在浏览器中运行，还考虑将 Java 作为脚本语言嵌入网页中，但这会使得 html 过于复杂，这时网景内部产生激烈的争论。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5.&lt;/strong&gt; 1995 年 4 月，网景招募了 Brendan Eich，为的是把 Scheme 语言嵌入浏览器当中。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6.&lt;/strong&gt; 一个月之后，网景最后决定要发明一种新的脚本语言，并且新语言“看上去与 Java 足够相似”。同月，Brendan Eich 仅花了十天就把新语言的原型设计出来了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;7.&lt;/strong&gt; 新语言最初被命名为 Mocha，1995 年 9 月改名为 LiveScript，同年 12 月，网景为了蹭 Java 的热度，在新语言将要部署的时候，将其改名为 JavaScript。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;8.&lt;/strong&gt; JavaScript 推出后大获成功，不久后，微软在 Internet Explorer 3 推出了 JScript，与网景的 JavaScript 双峰对峙。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;9.&lt;/strong&gt; 1996 年 11 月，网景向 ECMA 提交语言标准，ECMA 以 JavaScript 语言为基础制定了 ECMAScript 标准规范 ECMA-262&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最后&lt;/strong&gt;，JavaScript 的诞生经历使得它充满妥协与缺陷。&lt;br&gt;
+设计者布莱登其实对 Java 并不感兴趣，十天完成原型设计只是为了完成公司的任务，新语言缺少了一些对细节的考虑。&lt;br&gt;
+网景为了确立其 JS 的地位，早早向 ECMA 提交标准，相比于 C 语言问世近 20 年才发布国际标准，JS 推出一年半就确立标准，确实显得太过仓促。&lt;br&gt;
+但是，随着新标准的发布和借助一些第三方的帮助，只要我们好好遵守代码规范，大部分缺陷都可以回避。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>CSS知识总结</title>
       <link>http://localhost:1313/post/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</link>
       <pubDate>Sun, 29 Mar 2020 21:05:37 +0800</pubDate>
