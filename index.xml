@@ -61,7 +61,9 @@
 &lt;h2 id=&#34;查看对象属性&#34;&gt;查看对象属性&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;obj.name&lt;/code&gt; 或者 &lt;code&gt;obj[&amp;quot;name&amp;quot;]&lt;/code&gt; 查看name的值，&lt;strong&gt;name是字符串&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Object.keys(obj)&lt;/code&gt; 可以查看obj的所有key&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Object.keys(obj)&lt;/code&gt; 查看obj的所有key&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Object.values(obj)&lt;/code&gt; 查看obj的所有值&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Object.entries(obj)&lt;/code&gt; 同时查看键和值&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;console.dir(obj)&lt;/code&gt; 查看自身属性和原型属性&lt;/li&gt;
 &lt;li&gt;chrome中使用&lt;code&gt;obj.__proto__&lt;/code&gt;或者&lt;code&gt;Object.prototype&lt;/code&gt;查看对象的原型，第一种是chrome写法，第二种是官方写法&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;

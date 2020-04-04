@@ -69,7 +69,7 @@
 <meta itemprop="description" content="创建对象 let obj = { &quot;name&quot;:&quot;minu&quot;, age:18 } let obj = new Object({ &quot;name&quot;:&quot;minu&quot;, age:18 hu}) 删除对象属性 delete obj.age obj.age = undefined 不能删除属性，只能让其属性值变成undefined 查看对象属性 obj.name 或者 obj[&quot;name&quot;] 查看nam">
 <meta itemprop="datePublished" content="2020-04-04T23:07:31&#43;08:00" />
 <meta itemprop="dateModified" content="2020-04-04T23:07:31&#43;08:00" />
-<meta itemprop="wordCount" content="614">
+<meta itemprop="wordCount" content="630">
 
 
 
@@ -397,7 +397,9 @@
 <h2 id="查看对象属性">查看对象属性</h2>
 <ul>
 <li><code>obj.name</code> 或者 <code>obj[&quot;name&quot;]</code> 查看name的值，<strong>name是字符串</strong></li>
-<li><code>Object.keys(obj)</code> 可以查看obj的所有key</li>
+<li><code>Object.keys(obj)</code> 查看obj的所有key</li>
+<li><code>Object.values(obj)</code> 查看obj的所有值</li>
+<li><code>Object.entries(obj)</code> 同时查看键和值</li>
 <li><code>console.dir(obj)</code> 查看自身属性和原型属性</li>
 <li>chrome中使用<code>obj.__proto__</code>或者<code>Object.prototype</code>查看对象的原型，第一种是chrome写法，第二种是官方写法</li>
 <li></li>
