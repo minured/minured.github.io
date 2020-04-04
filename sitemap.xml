@@ -9,14 +9,21 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/javascript%E7%9A%84%E8%AF%9E%E7%94%9F/</loc>
-    <lastmod>2020-03-30T19:43:38+08:00</lastmod>
+    <loc>http://localhost:1313/post/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</loc>
+    <lastmod>2020-04-04T20:46:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/</loc>
+    <lastmod>2020-04-04T20:46:22+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/javascript%E7%9A%84%E8%AF%9E%E7%94%9F/</loc>
     <lastmod>2020-03-30T19:43:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

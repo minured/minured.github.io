@@ -32,6 +32,90 @@
     </item>
     
     <item>
+      <title>JS基本语法</title>
+      <link>http://localhost:1313/post/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Sat, 04 Apr 2020 20:46:22 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</guid>
+      
+        <description>&lt;h2 id=&#34;表达式和语句&#34;&gt;表达式和语句&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;表达式一般都会有值，如 &lt;code&gt;2 + 3    //5&lt;/code&gt;， 5就是该语句计算出来的值；&lt;code&gt;console.log(3)  //3&lt;/code&gt;   打印 3 是函数执行的效果，值是函数的返回值 undefined。&lt;/li&gt;
+&lt;li&gt;语句可能有值也可能没有，语句一般会改变环境（声明、赋值），如 &lt;code&gt;var a = 1;&lt;/code&gt;，该语句的值为返回值 undefined。&lt;/li&gt;
+&lt;li&gt;上面并不绝对，个人理解是表达式会产生一个值，语句是执行一个行为&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;标识符的规则&#34;&gt;标识符的规则&lt;/h2&gt;
+&lt;p&gt;JS中所有可以由我们自主命名的都可以称为标识符，如变量名、函数名，命名的时候要遵守命名规则:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;由unicode字母、$、_和数字组成，不能以数字开头，中文也是合法标识符&lt;/li&gt;
+&lt;li&gt;不能是es中的关键字和保留字&lt;/li&gt;
+&lt;li&gt;一般采用驼峰命名法 &lt;code&gt;getImg&lt;/code&gt; &lt;code&gt;myFunc&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;if-else-语句&#34;&gt;if else 语句&lt;/h2&gt;
+&lt;p&gt;语法：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let a = 5;
+if (a%2 === 0) {
+    console.log(&amp;quot;a是偶数&amp;quot;)
+}
+else {
+    console.log(&amp;quot;a是奇数&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;要点：
+如果省略 {}，if只会管到条件之后的第一句。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let a = 5;
+if (a &amp;gt; 10)
+    console.log(&amp;quot;a大于10&amp;quot;);
+    console.log(&amp;quot;哈哈哈&amp;quot;);
+
+//哈哈哈
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;不推荐省略 {}，要简写可用 &lt;code&gt;条件?成立执行语句:不成立执行语句&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;while和for语句&#34;&gt;while和for语句&lt;/h2&gt;
+&lt;p&gt;语法：
+while(条件){语句} 语句中一般要添加条件的增量，防止死循环&lt;br&gt;
+for循环被认为是while循环语法的语法糖。&lt;br&gt;
+？ 语法糖？听过不少，但是一直不知道是什么。。。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;语法糖（Syntactic sugar），也译为糖衣语法，是由英国计算机科学家彼得·约翰·兰达（Peter J. Landin）发明的一个术语，指计算机语言中添加的某种语法，这种语法对语言的功能并没有影响，但是更方便程序员使用。通常来说使用语法糖能够增加程序的可读性，从而减少程序代码出错的机会。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;语法，for遍历数组：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let arr =[];
+for (let i = 0, i &amp;lt; arr.length, i++){
+    console.log(arr[i]);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;要点：
+for 里面setTimeout的话，把for循环完之后，再去执行setTimeout的回调函数。&lt;/p&gt;
+&lt;h2 id=&#34;break和continue&#34;&gt;break和continue&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;break&lt;/code&gt;和&lt;code&gt;continue&lt;/code&gt;都是作用于上一级直接父层，break退出整个父层循环，continue退出本次循环流程，开始下一次。&lt;br&gt;
+注意：
+switch要记得break，当然有时候也不使用break，来达到判断多个条件同时成立的效果。&lt;/p&gt;
+&lt;h2 id=&#34;label&#34;&gt;label&lt;/h2&gt;
+&lt;p&gt;语法：
+&lt;code&gt;label1 : { console.log(&amp;quot;this is a label.&amp;quot;); }&lt;/code&gt;javascript&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;label 与 break、continue配合使用，主要应用在循环结构、多分支结构中，以便跳出内层嵌套体。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;要点：&lt;br&gt;
+&lt;code&gt;{ foo : 1 }&lt;/code&gt;javascript&lt;br&gt;
+在chrome会被认为是对象，在firefox会被认为是标签。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{ foo : 1; }&lt;/code&gt;javascript
+在chrome中被认为是标签。&lt;/p&gt;
+&lt;p&gt;JS要点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JS 大小写敏感&lt;/li&gt;
+&lt;li&gt;JS中只要不影响断句，多余的空格不会影响执行，一般为了代码可读性，符号前后添加空格&lt;/li&gt;
+&lt;li&gt;return不能回车，如果接了回车，JS会自以为是的在后面加&lt;code&gt;;&lt;/code&gt;，返回undefined&lt;/li&gt;
+&lt;li&gt;不要滥用注释，注意把坑标注&lt;/li&gt;
+&lt;li&gt;JS的精度问题，&lt;code&gt;0.1 + 0.2 !== 0.3&lt;/code&gt;，到底是什么问题，我现在也说不清楚，好像是关系到进制和存储的问题，这里只做个记录。
+&lt;blockquote&gt;
+&lt;p&gt;对于像0.1这样的数值用二进制表示你就会发现无法整除，最后算下来会是 0.000110011&amp;hellip;.由于存储空间有限，最后计算机会舍弃后面的数值，所以我们最后就只能得到一个近似值。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>JavaScript的诞生</title>
       <link>http://localhost:1313/post/javascript%E7%9A%84%E8%AF%9E%E7%94%9F/</link>
       <pubDate>Mon, 30 Mar 2020 19:43:38 +0800</pubDate>
