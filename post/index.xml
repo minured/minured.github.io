@@ -6,10 +6,19 @@
     <description>Recent content in Posts on minu前端学习记录</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 04 Apr 2020 20:46:22 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2020 23:07:31 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JS对象的基本用法</title>
+      <link>http://localhost:1313/post/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Sat, 04 Apr 2020 23:07:31 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</guid>
+      <description>声明对象 let obj = {} let obj = new Object() 删除对象属性 查看对象属性 修改和增加对象属性 &amp;ldquo;name&amp;rdquo; in obj 和 hasOwnProperty(&amp;ldquo;name&amp;rdquo</description>
+    </item>
     
     <item>
       <title>JS基本语法</title>

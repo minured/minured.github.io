@@ -32,6 +32,31 @@
     </item>
     
     <item>
+      <title>JS对象的基本用法</title>
+      <link>http://localhost:1313/post/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Sat, 04 Apr 2020 23:07:31 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</guid>
+      
+        <description>&lt;h2 id=&#34;声明对象&#34;&gt;声明对象&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;let obj = {}&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;let obj = new Object()&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;删除对象属性&#34;&gt;删除对象属性&lt;/h2&gt;
+&lt;h2 id=&#34;查看对象属性&#34;&gt;查看对象属性&lt;/h2&gt;
+&lt;h2 id=&#34;修改和增加对象属性&#34;&gt;修改和增加对象属性&lt;/h2&gt;
+&lt;h2 id=&#34;name-in-obj-和-hasownpropertyname的区别&#34;&gt;&amp;ldquo;name&amp;rdquo; in obj 和 hasOwnProperty(&amp;ldquo;name&amp;rdquo;)的区别&lt;/h2&gt;
+&lt;p&gt;##要点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对象的键是字符串&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>JS基本语法</title>
       <link>http://localhost:1313/post/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
       <pubDate>Sat, 04 Apr 2020 20:46:22 +0800</pubDate>
@@ -82,8 +107,8 @@ for循环被认为是while循环语法的语法糖。&lt;br&gt;
 for (let i = 0, i &amp;lt; arr.length, i++){
     console.log(arr[i]);
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;要点：
-for 里面setTimeout的话，把for循环完之后，再去执行setTimeout的回调函数。&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;要点：&lt;/p&gt;
+&lt;p&gt;for (var i = 0, ,)里面setTimeout的话，把for循环完之后，再去执行setTimeout的回调函数。用let不会。&lt;/p&gt;
 &lt;h2 id=&#34;break和continue&#34;&gt;break和continue&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;break&lt;/code&gt;和&lt;code&gt;continue&lt;/code&gt;都是作用于上一级直接父层，break退出整个父层循环，continue退出本次循环流程，开始下一次。&lt;br&gt;
 注意：
@@ -99,10 +124,11 @@ switch要记得break，当然有时候也不使用break，来达到判断多个�
 在chrome会被认为是对象，在firefox会被认为是标签。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;{ foo : 1; }&lt;/code&gt;javascript
 在chrome中被认为是标签。&lt;/p&gt;
-&lt;p&gt;JS要点：&lt;/p&gt;
+&lt;h2 id=&#34;js要点&#34;&gt;JS要点：&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;JS 大小写敏感&lt;/li&gt;
 &lt;li&gt;JS中只要不影响断句，多余的空格不会影响执行，一般为了代码可读性，符号前后添加空格&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;a &amp;amp;&amp;amp; b &amp;amp;&amp;amp; c&lt;/code&gt; 取第一个假值或者最后一个值 c，&lt;code&gt;a || b || c&lt;/code&gt;取第一个真值或者最后一个值 c。&lt;/li&gt;
 &lt;li&gt;return不能回车，如果接了回车，JS会自以为是的在后面加&lt;code&gt;;&lt;/code&gt;，返回undefined&lt;/li&gt;
 &lt;li&gt;不要滥用注释，注意把坑标注&lt;/li&gt;
 &lt;li&gt;JS的精度问题，&lt;code&gt;0.1 + 0.2 !== 0.3&lt;/code&gt;，到底是什么问题，我现在也说不清楚，好像是关系到进制和存储的问题，这里只做个记录。
