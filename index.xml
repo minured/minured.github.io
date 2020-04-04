@@ -38,19 +38,59 @@
       
       <guid>http://localhost:1313/post/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</guid>
       
-        <description>&lt;h2 id=&#34;声明对象&#34;&gt;声明对象&lt;/h2&gt;
+        <description>&lt;h2 id=&#34;创建对象&#34;&gt;创建对象&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;code&gt;let obj = {}&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;let obj = new Object()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;pre&gt;&lt;code&gt;let obj = {
+     &amp;quot;name&amp;quot;:&amp;quot;minu&amp;quot;,
+     age:18
+ }
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;pre&gt;&lt;code&gt;let obj = new Object({
+     &amp;quot;name&amp;quot;:&amp;quot;minu&amp;quot;, 
+     age:18
+ hu})
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;删除对象属性&#34;&gt;删除对象属性&lt;/h2&gt;
-&lt;h2 id=&#34;查看对象属性&#34;&gt;查看对象属性&lt;/h2&gt;
-&lt;h2 id=&#34;修改和增加对象属性&#34;&gt;修改和增加对象属性&lt;/h2&gt;
-&lt;h2 id=&#34;name-in-obj-和-hasownpropertyname的区别&#34;&gt;&amp;ldquo;name&amp;rdquo; in obj 和 hasOwnProperty(&amp;ldquo;name&amp;rdquo;)的区别&lt;/h2&gt;
-&lt;p&gt;##要点：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;对象的键是字符串&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;delete obj.age&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;obj.age = undefined&lt;/code&gt; 不能删除属性，只能让其属性值变成undefined&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;查看对象属性&#34;&gt;查看对象属性&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;obj.name&lt;/code&gt; 或者 &lt;code&gt;obj[&amp;quot;name&amp;quot;]&lt;/code&gt; 查看name的值，&lt;strong&gt;name是字符串&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Object.keys(obj)&lt;/code&gt; 可以查看obj的所有key&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;console.dir(obj)&lt;/code&gt; 查看自身属性和原型属性&lt;/li&gt;
+&lt;li&gt;chrome中使用&lt;code&gt;obj.__proto__&lt;/code&gt;或者&lt;code&gt;Object.prototype&lt;/code&gt;查看对象的原型，第一种是chrome写法，第二种是官方写法&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;修改和增加对象属性&#34;&gt;修改和增加对象属性&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;修改name的值：&lt;br&gt;
+&lt;code&gt;obj.name = &amp;quot;new name&amp;quot;&lt;/code&gt;、&lt;code&gt;obj[&amp;quot;name&amp;quot;] = &amp;quot;new name&amp;quot;&lt;/code&gt;、&lt;code&gt;let obj = {name: &amp;quot;new name&amp;quot;}&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;批量添加或修改：&lt;br&gt;
+&lt;code&gt;Object.assign(obj, {age: 18, gender : &amp;quot;M})&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;修改原型的属性：
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;obj.toString = &amp;quot;new toString&lt;/code&gt; 只会在obj自身创建同名的toString属性，不会修改原型。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;object.__proto__.toString = &amp;quot;xxx&amp;quot;&lt;/code&gt;或者&lt;code&gt;Object.prototype.toString = &amp;quot;xxx&amp;quot;&lt;/code&gt;会修改原型的toString方法&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;let obj2 = {};obj.__proto__ = obj2;&lt;/code&gt;
+会修改obj.__proto__指向为obj2，obj2.__proto__指向原型，obj.toString依然可以调用根原型的toString方法。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;let obj3 = Object.create(obj2)&lt;/code&gt; 在创建的时候指定原型。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;name-in-obj-和-hasownpropertyname的区别&#34;&gt;&amp;ldquo;name&amp;rdquo; in obj 和 hasOwnProperty(&amp;ldquo;name&amp;rdquo;)的区别&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;name&amp;quot; in obj&lt;/code&gt; 查找范围是自身以及其原型, 其中一个地方有都会返回true&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;obj.hasOwnProperty(&amp;quot;name&amp;quot;)&lt;/code&gt; 查找范围是对象自身。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;要点&#34;&gt;要点：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;对象的键是字符串&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;原型也有原型，是null，&lt;code&gt;Object.prototype.__proto__&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       

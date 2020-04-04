@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="minured" />
-  <meta name="description" content="声明对象 let obj = {} let obj = new Object() 删除对象属性 查看对象属性 修改和增加对象属性 &amp;ldquo;name&amp;rdquo; in obj 和 hasOwnProperty(&amp;ldquo;name&amp;rdquo" />
+  <meta name="description" content="创建对象 let obj = { &amp;quot;name&amp;quot;:&amp;quot;minu&amp;quot;, age:18 } let obj = new Object({ &amp;quot;name&amp;quot;:&amp;quot;minu&amp;quot;, age:18 hu}) 删除对象属性 delete obj.age obj.age = undefined 不能删除属性，只能让其属性值变成undefined 查看对象属性 obj.name 或者 obj[&amp;quot;name&amp;quot;] 查看nam" />
 
   <meta name="keywords" content="Hugo, theme, jane" />
 
@@ -60,22 +60,22 @@
 
 
 <meta property="og:title" content="JS对象的基本用法" />
-<meta property="og:description" content="声明对象 let obj = {} let obj = new Object() 删除对象属性 查看对象属性 修改和增加对象属性 &ldquo;name&rdquo; in obj 和 hasOwnProperty(&ldquo;name&rdquo" />
+<meta property="og:description" content="创建对象 let obj = { &quot;name&quot;:&quot;minu&quot;, age:18 } let obj = new Object({ &quot;name&quot;:&quot;minu&quot;, age:18 hu}) 删除对象属性 delete obj.age obj.age = undefined 不能删除属性，只能让其属性值变成undefined 查看对象属性 obj.name 或者 obj[&quot;name&quot;] 查看nam" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/post/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" />
 <meta property="article:published_time" content="2020-04-04T23:07:31+08:00" />
 <meta property="article:modified_time" content="2020-04-04T23:07:31+08:00" />
 <meta itemprop="name" content="JS对象的基本用法">
-<meta itemprop="description" content="声明对象 let obj = {} let obj = new Object() 删除对象属性 查看对象属性 修改和增加对象属性 &ldquo;name&rdquo; in obj 和 hasOwnProperty(&ldquo;name&rdquo">
+<meta itemprop="description" content="创建对象 let obj = { &quot;name&quot;:&quot;minu&quot;, age:18 } let obj = new Object({ &quot;name&quot;:&quot;minu&quot;, age:18 hu}) 删除对象属性 delete obj.age obj.age = undefined 不能删除属性，只能让其属性值变成undefined 查看对象属性 obj.name 或者 obj[&quot;name&quot;] 查看nam">
 <meta itemprop="datePublished" content="2020-04-04T23:07:31&#43;08:00" />
 <meta itemprop="dateModified" content="2020-04-04T23:07:31&#43;08:00" />
-<meta itemprop="wordCount" content="88">
+<meta itemprop="wordCount" content="614">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="JS对象的基本用法"/>
-<meta name="twitter:description" content="声明对象 let obj = {} let obj = new Object() 删除对象属性 查看对象属性 修改和增加对象属性 &ldquo;name&rdquo; in obj 和 hasOwnProperty(&ldquo;name&rdquo"/>
+<meta name="twitter:description" content="创建对象 let obj = { &quot;name&quot;:&quot;minu&quot;, age:18 } let obj = new Object({ &quot;name&quot;:&quot;minu&quot;, age:18 hu}) 删除对象属性 delete obj.age obj.age = undefined 不能删除属性，只能让其属性值变成undefined 查看对象属性 obj.name 或者 obj[&quot;name&quot;] 查看nam"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -361,11 +361,12 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#声明对象">声明对象</a></li>
+    <li><a href="#创建对象">创建对象</a></li>
     <li><a href="#删除对象属性">删除对象属性</a></li>
     <li><a href="#查看对象属性">查看对象属性</a></li>
     <li><a href="#修改和增加对象属性">修改和增加对象属性</a></li>
     <li><a href="#name-in-obj-和-hasownpropertyname的区别">&ldquo;name&rdquo; in obj 和 hasOwnProperty(&ldquo;name&rdquo;)的区别</a></li>
+    <li><a href="#要点">要点：</a></li>
   </ul>
 </nav>
   </div>
@@ -373,19 +374,59 @@
 
     
     <div class="post-content">
-      <h2 id="声明对象">声明对象</h2>
+      <h2 id="创建对象">创建对象</h2>
 <ol>
-<li><code>let obj = {}</code></li>
-<li><code>let obj = new Object()</code></li>
+<li>
+<pre><code>let obj = {
+     &quot;name&quot;:&quot;minu&quot;,
+     age:18
+ }
+</code></pre></li>
+<li>
+<pre><code>let obj = new Object({
+     &quot;name&quot;:&quot;minu&quot;, 
+     age:18
+ hu})
+</code></pre></li>
 </ol>
 <h2 id="删除对象属性">删除对象属性</h2>
-<h2 id="查看对象属性">查看对象属性</h2>
-<h2 id="修改和增加对象属性">修改和增加对象属性</h2>
-<h2 id="name-in-obj-和-hasownpropertyname的区别">&ldquo;name&rdquo; in obj 和 hasOwnProperty(&ldquo;name&rdquo;)的区别</h2>
-<p>##要点：</p>
 <ul>
-<li>对象的键是字符串</li>
+<li><code>delete obj.age</code></li>
+<li><code>obj.age = undefined</code> 不能删除属性，只能让其属性值变成undefined</li>
+</ul>
+<h2 id="查看对象属性">查看对象属性</h2>
+<ul>
+<li><code>obj.name</code> 或者 <code>obj[&quot;name&quot;]</code> 查看name的值，<strong>name是字符串</strong></li>
+<li><code>Object.keys(obj)</code> 可以查看obj的所有key</li>
+<li><code>console.dir(obj)</code> 查看自身属性和原型属性</li>
+<li>chrome中使用<code>obj.__proto__</code>或者<code>Object.prototype</code>查看对象的原型，第一种是chrome写法，第二种是官方写法</li>
 <li></li>
+</ul>
+<h2 id="修改和增加对象属性">修改和增加对象属性</h2>
+<ul>
+<li>修改name的值：<br>
+<code>obj.name = &quot;new name&quot;</code>、<code>obj[&quot;name&quot;] = &quot;new name&quot;</code>、<code>let obj = {name: &quot;new name&quot;}</code></li>
+<li>批量添加或修改：<br>
+<code>Object.assign(obj, {age: 18, gender : &quot;M})</code></li>
+<li>修改原型的属性：
+<ol>
+<li><code>obj.toString = &quot;new toString</code> 只会在obj自身创建同名的toString属性，不会修改原型。</li>
+<li><code>object.__proto__.toString = &quot;xxx&quot;</code>或者<code>Object.prototype.toString = &quot;xxx&quot;</code>会修改原型的toString方法</li>
+<li><code>let obj2 = {};obj.__proto__ = obj2;</code>
+会修改obj.__proto__指向为obj2，obj2.__proto__指向原型，obj.toString依然可以调用根原型的toString方法。</li>
+<li><code>let obj3 = Object.create(obj2)</code> 在创建的时候指定原型。</li>
+</ol>
+</li>
+</ul>
+<h2 id="name-in-obj-和-hasownpropertyname的区别">&ldquo;name&rdquo; in obj 和 hasOwnProperty(&ldquo;name&rdquo;)的区别</h2>
+<ul>
+<li><code>&quot;name&quot; in obj</code> 查找范围是自身以及其原型, 其中一个地方有都会返回true</li>
+<li><code>obj.hasOwnProperty(&quot;name&quot;)</code> 查找范围是对象自身。</li>
+</ul>
+<h2 id="要点">要点：</h2>
+<ul>
+<li><strong>对象的键是字符串</strong></li>
+<li>原型也有原型，是null，<code>Object.prototype.__proto__</code></li>
 </ul>
 
     </div>
