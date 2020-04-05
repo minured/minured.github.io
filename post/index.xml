@@ -17,7 +17,7 @@
       <pubDate>Sat, 04 Apr 2020 23:07:31 +0800</pubDate>
       
       <guid>http://localhost:1313/post/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</guid>
-      <description>创建对象 let obj = { &amp;quot;name&amp;quot;:&amp;quot;minu&amp;quot;, age:18 } let obj = new Object({ &amp;quot;name&amp;quot;:&amp;quot;minu&amp;quot;, age:18 hu}) 删除对象属性 delete obj.age obj.age = undefined 不能删除属性，只能让其属性值变成undefined 查看对象属性 obj.name 或者 obj[&amp;quot;name&amp;quot;] 查看nam</description>
+      <description>创建对象 let obj = { &amp;quot;name&amp;quot;:&amp;quot;minu&amp;quot;, age:18 } let obj = new Object({ &amp;quot;name&amp;quot;:&amp;quot;minu&amp;quot;, age:18 }) 删除对象属性 delete obj.age obj.age = undefined 不能删除属性，只能让其属性值变成undefined 查看对象属性 obj.name 或者 obj[&amp;quot;name&amp;quot;] 查看nam</description>
     </item>
     
     <item>

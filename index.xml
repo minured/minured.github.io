@@ -50,7 +50,7 @@
 &lt;pre&gt;&lt;code&gt;let obj = new Object({
      &amp;quot;name&amp;quot;:&amp;quot;minu&amp;quot;, 
      age:18
- hu})
+ })
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;删除对象属性&#34;&gt;删除对象属性&lt;/h2&gt;
