@@ -6,10 +6,28 @@
     <description>Recent content in Posts on minu前端学习记录</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 04 Apr 2020 23:07:31 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2020 10:39:51 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Flex基本用法</title>
+      <link>http://localhost:1313/post/flex%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Fri, 17 Apr 2020 10:39:51 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/flex%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</guid>
+      <description>flex布局的两个概念,一个是父容器 container,一个是直接子元素 items 父容器的属性 display: flex 变成flex布局 flex-direction: row/ column/ row-reverse/ column-revers</description>
+    </item>
+    
+    <item>
+      <title>JQuery的基本使用</title>
+      <link>http://localhost:1313/post/jquery%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Thu, 16 Apr 2020 22:53:12 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/jquery%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</guid>
+      <description>jQuery 如何获取元素 jQuery获取元素是通过调用DOM原生的querySelectorAll()，这样就可以用css选择器来获取元素，比如： $(&#39;input[name=first]&#39;) 选</description>
+    </item>
     
     <item>
       <title>JS对象的基本用法</title>
