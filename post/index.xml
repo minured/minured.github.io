@@ -6,10 +6,19 @@
     <description>Recent content in Posts on minu前端学习记录</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 17 Apr 2020 10:39:51 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2020 00:06:01 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JS重难点笔记</title>
+      <link>http://localhost:1313/post/js%E9%87%8D%E9%9A%BE%E7%82%B9%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 29 Apr 2020 00:06:01 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/js%E9%87%8D%E9%9A%BE%E7%82%B9%E7%AC%94%E8%AE%B0/</guid>
+      <description>闭包 什么是闭包 在嵌套函数中，子函数访问了父函数的变量就形成了闭包 闭包应该就是指子函数与父函数变量之间引用关系，只要函数对变量的引用还在，该变</description>
+    </item>
     
     <item>
       <title>Flex基本用法</title>

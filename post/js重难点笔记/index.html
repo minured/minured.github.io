@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>归档 - minu前端学习记录</title>
+  <title>JS重难点笔记 - minu前端学习记录</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="minured" />
-  <meta name="description" content="Hugo theme jane example site." />
+  <meta name="description" content="闭包 什么是闭包 在嵌套函数中，子函数访问了父函数的变量就形成了闭包 闭包应该就是指子函数与父函数变量之间引用关系，只要函数对变量的引用还在，该变" />
+
   <meta name="keywords" content="Hugo, theme, jane" />
 
 
@@ -34,8 +35,8 @@
 <meta name="generator" content="Hugo 0.67.0" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/" />
-<link href="/post/index.xml" rel="alternate" type="application/rss+xml" title="minu前端学习记录" />
+<link rel="canonical" href="http://localhost:1313/post/js%E9%87%8D%E9%9A%BE%E7%82%B9%E7%AC%94%E8%AE%B0/" />
+
 
 
 
@@ -58,15 +59,23 @@
 
 
 
-<meta property="og:title" content="Posts" />
-<meta property="og:description" content="Hugo theme jane example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/post/" />
-<meta property="og:updated_time" content="2020-04-29T00:06:01+08:00" />
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="Hugo theme jane example site."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="Hugo theme jane example site."/>
+<meta property="og:title" content="JS重难点笔记" />
+<meta property="og:description" content="闭包 什么是闭包 在嵌套函数中，子函数访问了父函数的变量就形成了闭包 闭包应该就是指子函数与父函数变量之间引用关系，只要函数对变量的引用还在，该变" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/js%E9%87%8D%E9%9A%BE%E7%82%B9%E7%AC%94%E8%AE%B0/" />
+<meta property="article:published_time" content="2020-04-29T00:06:01+08:00" />
+<meta property="article:modified_time" content="2020-04-29T00:06:01+08:00" />
+<meta itemprop="name" content="JS重难点笔记">
+<meta itemprop="description" content="闭包 什么是闭包 在嵌套函数中，子函数访问了父函数的变量就形成了闭包 闭包应该就是指子函数与父函数变量之间引用关系，只要函数对变量的引用还在，该变">
+<meta itemprop="datePublished" content="2020-04-29T00:06:01&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-29T00:06:01&#43;08:00" />
+<meta itemprop="wordCount" content="1860">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="JS重难点笔记"/>
+<meta name="twitter:description" content="闭包 什么是闭包 在嵌套函数中，子函数访问了父函数的变量就形成了闭包 闭包应该就是指子函数与父函数变量之间引用关系，只要函数对变量的引用还在，该变"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -244,7 +253,7 @@
 
       </li>
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -325,177 +334,325 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-<section id="archive" class="archive">
-    <div class="archive-title">
-      <span class="archive-post-counter">
-          共计 13 篇文章
-      </span>
-    </div>
+          <article class="post bg-white">
     
-      <div class="collection-title">
-        <h2 class="archive-year">2020</h2>
+    <header class="post-header">
+      <h1 class="post-title">JS重难点笔记</h1>
+      
+      <div class="post-meta">
+        <time datetime="2020-04-29" class="post-time">
+          2020-04-29
+        </time>
+        
+        
+
+        
+        
+
+        
+        
       </div>
+    </header>
 
-    <div class="archive-post">
-      <time datetime="2020-04-29" class="archive-post-time">
-        2020-04-29
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/js%E9%87%8D%E9%9A%BE%E7%82%B9%E7%AC%94%E8%AE%B0/" class="archive-post-link">
-          JS重难点笔记
-        </a>
-      </span>
-    </div>
     
-
-    <div class="archive-post">
-      <time datetime="2020-04-17" class="archive-post-time">
-        2020-04-17
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/flex%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" class="archive-post-link">
-          Flex基本用法
-        </a>
-      </span>
-    </div>
     
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#闭包">闭包</a>
+      <ul>
+        <li><a href="#什么是闭包">什么是闭包</a></li>
+        <li><a href="#闭包的用途">闭包的用途</a></li>
+        <li><a href="#闭包的缺点">闭包的缺点</a></li>
+      </ul>
+    </li>
+    <li><a href="#call-apply-bind">call apply bind</a>
+      <ul>
+        <li><a href="#call">call</a></li>
+        <li><a href="#apply">apply</a></li>
+        <li><a href="#bind">bind</a></li>
+      </ul>
+    </li>
+    <li><a href="#http状态码">http状态码</a></li>
+    <li><a href="#数组去重">数组去重</a></li>
+    <li><a href="#事件相关">事件相关</a>
+      <ul>
+        <li><a href="#事件委托">事件委托</a></li>
+      </ul>
+    </li>
+    <li><a href="#阻止默认动作">阻止默认动作</a>
+      <ul>
+        <li><a href="#阻止事件冒泡">阻止事件冒泡</a></li>
+      </ul>
+    </li>
+    <li><a href="#js继承">JS继承</a>
+      <ul>
+        <li><a href="#原型">原型</a></li>
+        <li><a href="#class">class</a></li>
+      </ul>
+    </li>
+    <li><a href="#promise">Promise</a></li>
+    <li><a href="#跨域">跨域</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
 
-    <div class="archive-post">
-      <time datetime="2020-04-16" class="archive-post-time">
-        2020-04-16
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/jquery%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" class="archive-post-link">
-          JQuery的基本使用
-        </a>
-      </span>
-    </div>
     
+    <div class="post-content">
+      <h2 id="闭包">闭包</h2>
+<h3 id="什么是闭包">什么是闭包</h3>
+<p>在嵌套函数中，子函数访问了父函数的变量就形成了闭包<br>
+闭包应该就是指子函数与父函数变量之间引用关系，只要函数对变量的引用还在，该变量就不会被回收，即使父函数已执行完毕</p>
+<pre><code>let addOne = (() =&gt; {
+    let a = 0
+    return () =&gt; {console.log(++a)}
+})()
+addOne()    // 1
+addOne()    // 2
+</code></pre><h3 id="闭包的用途">闭包的用途</h3>
+<ol>
+<li>使得变量不会被回收，比如计数器、缓存</li>
+<li>函数外部可以访问和修改函数内部变量，实现封装</li>
+<li>通过返回的函数/对象作为对外接口，模拟一般面向对象语言中“类”的私有属性</li>
+</ol>
+<h3 id="闭包的缺点">闭包的缺点</h3>
+<ol>
+<li>函数的变量会一直保存在内存中，滥用闭包会耗费内存</li>
+<li>函数外部能够轻易改变内部的变量</li>
+</ol>
+<h2 id="call-apply-bind">call apply bind</h2>
+<h3 id="call">call</h3>
+<p>call可以在调用函数的时候，手动指定this，<code>fn.call(this, arg1, arg2, ...)</code><br>
+可以用来实现继承</p>
+<pre><code>function People(name, age) {
+    this.name = name
+    this.age =age
+}
+function Student(name, age, teacher) {
+    People.call(this, name, age)
+    this.teacher = teacher
+}
+let minu = new Student(&quot;minu&quot;, 18, &quot;frankfang&quot;)
+console.log(minu)   //  {&quot;name&quot;: &quot;minu&quot;, &quot;age&quot;: 18, &quot;teacher&quot;: &quot;frankfang&quot; }
+</code></pre><h3 id="apply">apply</h3>
+<p>apply() 的语法和作用 与 call() 类似，唯一的区别是 call()接受的是一个参数列表，apply()接受的是一个参数的数组（或者伪数组）
+<code>apply(this, [arg1, arg2, ...])</code></p>
+<h3 id="bind">bind</h3>
+<p>在创建函数的时候调用bind()，函数的this被指定为bind()的第一个参数，不论怎么调用，this不变；也可以指定函数的初始参数
+<code>let newFn = fn.bind(this, arg1, arg2, ...)</code>
+用法：</p>
+<ol>
+<li>在创建函数的时候，this绑定为原始对象</li>
+</ol>
+<pre><code>let module = {
+    x:81,
+    getX(){
+        console.log(this.x)
+    }
+}
+let boundGetX = module.getX.bind(module)
+boundGetX()    // 81
+</code></pre><ol start="2">
+<li>指定初始参数</li>
+</ol>
+<pre><code>function printArguments() {
+    console.log(arguments)
+}
+let defaultArg1 = printArguments.bind(null, 666)
+defaultArg1(1, 2, 3)    // [666, 1, 2, 3, length...]
+</code></pre><h2 id="http状态码">http状态码</h2>
+<ol>
+<li>100  Continue，临时响应，内容正常可行，客户端应该继续发送请求</li>
+<li>200  OK， 响应成功</li>
+<li>201  Create， 请求已经成功，并因此创建一个新的资源。这通常是在POST请求，或者是某些PUT请求之后返回的响应。</li>
+<li>202  Accepted， 服务器已收到请求，但未响应。</li>
+<li>301 Moved Permanently，所请求的URI资源路径已经改变，新的URL会在响应的Location:头字段里找到。</li>
+<li>400 Bad Request， 请求有误</li>
+<li>401 Unauthorized， 当前请求需要用户验证</li>
+<li>404 Not Found，请求资源找不到</li>
+<li>500 Internal Server Error，服务器遇到了不知道如何处理的情况</li>
+<li>502 Bad Gateway，服务器作为网关需要得到一个处理这个请求的响应，但是得到一个错误的响应。</li>
+</ol>
+<h2 id="数组去重">数组去重</h2>
+<pre><code>let newArr = Array.from(new Set([1,5,2,3,4,2,3,1,3,4]))
+console.log(newArr)
+</code></pre><hr>
+<pre><code>let arr = [1,5,2,3,4,2,3,1,3,4]
+let newArr = []
+arr.forEach((item) =&gt; {
+    if (newArr.indexOf(item) &lt; 0) {
+        newArr.push(item)
+    }
+})
+console.log(newArr)
+</code></pre><hr>
+<p>Map对象的key是唯一的</p>
+<pre><code>let arr = [1,5,2,3,4,2,3,1,3,4]
+let map = new Map()
+arr.forEach((item) =&gt; {
+    map.set(item)
+})
+let newArr = []
+for (let key of map.keys()) {
+    newArr.push(key)
+}
+console.log(newArr)
+</code></pre><h2 id="事件相关">事件相关</h2>
+<h3 id="事件委托">事件委托</h3>
+<p>事件委托利用了事件冒泡的特性，将元素本身的事件监听 委托给父元素，可以通过event.target来查看事件是从哪个子元素冒上来的</p>
+<pre><code>ul.onclick = (e) =&gt; {
+    e.target.style.display = &quot;none&quot; 
+}
+</code></pre><h2 id="阻止默认动作">阻止默认动作</h2>
+<p><code>event.preventDefault()</code></p>
+<h3 id="阻止事件冒泡">阻止事件冒泡</h3>
+<p><code>event.stopPropagation()</code></p>
+<h2 id="js继承">JS继承</h2>
+<h3 id="原型">原型</h3>
+<p>原型是JS不同对象之间构成关联的核心所在
+es6之前，JS的继承主要有两种方法，一是通过指定子类的原型为父类的原型，它的实例就可以通过__proto__访问原型属性；二是子类调用父类构造函数，通过call来指定this</p>
+<pre><code>构造函数的继承：
+function People(name) {
+    this.name = name
+}
+People.prototype.sayHi = function(){console.log(`Hi, I'm ${this.name}`)}
 
-    <div class="archive-post">
-      <time datetime="2020-04-04" class="archive-post-time">
-        2020-04-04
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" class="archive-post-link">
-          JS对象的基本用法
-        </a>
-      </span>
+function Student(name, teacher){
+    People.call(this, name, teacher)   //继承父类的属性
+    this.teacher = teacher
+}
+Student.prototype = Object.create(People.prototype)   //复制父类prototype达到继承父类原型
+Student.prototype.constructor = Student     // 修正子类的构造函数
+let s1 = new Student(&quot;minu&quot;, &quot;fang&quot;)
+s1.sayHi()
+</code></pre><h3 id="class">class</h3>
+<p>js的继承骨子里就是基于原型的，可以认为class是一个prototype的语法糖<br>
+class中使用extends来实现继承，通过super()来调用父类的构造方法
+语法：</p>
+<pre><code>class People {
+    constructor(name){
+        this.name = name
+    }
+    sayHi(){
+        console.log(`Hi, I'm ${this.name}`)
+    }
+}
+class Student extends People {
+    constructor(name, teacher){
+        super(name)
+        this.teacher = teacher
+    }
+}
+let s1 = new Student(&quot;minu&quot;, &quot;fang&quot;)
+s1.sayHi()
+</code></pre><h2 id="promise">Promise</h2>
+<ol start="0">
+<li>
+<p>Promise用于异步任务中，设定结果成功或者失败的不同执行函数</p>
+</li>
+<li>
+<p><code>let p1 = new Promise((resolve, reject) =&gt; { })</code></p>
+</li>
+<li>
+<p><code>.then(onFulfilled, onRejected)</code> 接受两个函数，都是可选的；</p>
+</li>
+</ol>
+<p>成功执行onFulfilled，失败执行onRejected；</p>
+<p>失败也可以用.catch(onRejected)；</p>
+<p>then()和catch()都返回一个promise对象，可以链式调用；</p>
+<p>链式调用时，then()里面应该返回一个值，给下一个then()的回调函数用。</p>
+<ol start="3">
+<li>Promise.all(iterable) 接受一个可迭代对象，将多个结果合成一个Promise对象；</li>
+</ol>
+<p>如果所有的结果都是 resolve 那执行resolve的回调，并把每个item的结果以数组形式传给resolve；</p>
+<p>只要一个失败，那就reject， 并把出错的那个item的结果传给reject</p>
+<ol start="4">
+<li>Promise.race(iterable)  也是接受一个数组，那个快就返回那个的结果，不论resolve还是reject</li>
+</ol>
+<p>嗨呀，好乱啊，: )</p>
+<h2 id="跨域">跨域</h2>
+<ol>
+<li>源：协议 + 域名 + 端口 ，两个源一模一样就是同源</li>
+<li>跨域是不同源的页面之间相互访问</li>
+<li>JSONP跨域  是把数据写入js文件当中，然后通过script标签来获取数据，一般是把数据传给回调函数的方式来读取数据<br>
+JSONP支持IE，JSONP不能获取http状态码，不支持POST</li>
+<li>CORS 是服务器通过在响应头设置允许访问的白名单来达到跨域，<code>Access-Control-Allow-Origin: xxx.com</code></li>
+</ol>
+
     </div>
+
     
-
-    <div class="archive-post">
-      <time datetime="2020-04-04" class="archive-post-time">
-        2020-04-04
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="archive-post-link">
-          JS基本语法
-        </a>
-      </span>
-    </div>
     
-
-    <div class="archive-post">
-      <time datetime="2020-03-30" class="archive-post-time">
-        2020-03-30
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/javascript%E7%9A%84%E8%AF%9E%E7%94%9F/" class="archive-post-link">
-          JavaScript的诞生
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2020-03-29" class="archive-post-time">
-        2020-03-29
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="archive-post-link">
-          CSS知识总结
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2020-03-26" class="archive-post-time">
-        2020-03-26
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/%E6%B5%85%E6%9E%90url/" class="archive-post-link">
-          浅析URL
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2020-03-17" class="archive-post-time">
-        2020-03-17
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/" class="archive-post-link">
-          HTML常用标签
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2020-03-17" class="archive-post-time">
-        2020-03-17
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/3.17%E5%A4%8D%E4%B9%A0/" class="archive-post-link">
-          3月17复习
-        </a>
-      </span>
-    </div></section>
-
-
-
-
-
-
-  
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-  <nav class="pagination">
-    <ul>
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">minured</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+      2020-04-29
       
-      <li  class="active" >
-        <a href="/post/">1</a>
-      </li>
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
       
-      <li >
-        <a href="/post/page/2/">2</a>
-      </li>
+
       
-    </ul>
-  </nav>
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/flex%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/">
+            <span class="next-text nav-default">Flex基本用法</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
 
   
   
 
+  
+  
 
+  
 
+  
+  
 
+  
+
+  
+
+  
+
+    
+
+  
 
         </div>
       </div>
