@@ -10,7 +10,7 @@
         content="minured"/>
 
   
-  <meta name="description" content=""/>
+  <meta name="description" content="MVC M 指的是Model，用来存放数据 V 指的是View，是用户视图层，前端中指的是html和DOM C 指的是Controller，用来存放控制逻辑 实际应用中，这三个部分常常有交叉的地方，有时候很难分清楚是属"/>
   
 
   
@@ -95,7 +95,66 @@
           <h2><a href='/posts/%E6%B5%85%E6%9E%90mvc/'>浅析MVC</a></h2>
           <span class="date">2020.05.05</span>
         </div>
-        <div class="post_content markdown"></div>
+        <div class="post_content markdown"><h2 id="mvc">MVC</h2>
+<p>M 指的是Model，用来存放数据<br>
+V 指的是View，是用户视图层，前端中指的是html和DOM<br>
+C 指的是Controller，用来存放控制逻辑<br>
+实际应用中，这三个部分常常有交叉的地方，有时候很难分清楚是属于哪个部分<br>
+其实几个部分的边界并不是很重要，只要在组织代码的时候注意这几个关注点就可以了</p>
+<p>一般来说，三个对象会有下面这些基本属性</p>
+<pre><code>class Model {
+    constructor(data){
+    }
+    create(){}
+    remove(){}
+    update(){}
+    get(){}
+}
+class View {
+    constructor(el){
+        this.el: el
+    }
+    render(){}
+}
+class Controller {
+    init(){
+        view.render()
+        bindEvents()
+    }
+    events: {}
+    render(){}
+    bindEvents(){}
+}
+</code></pre><p>三个部分的基本运行流程：</p>
+<ol>
+<li>页面打开，C调用 V的html 和 M的数据，对页面进行首次渲染，然后绑定事件</li>
+<li>接收到用户事件，C进行相应的响应，更新M的数据，然后重新渲染页面</li>
+</ol>
+<h2 id="eventbus">EventBus</h2>
+<p>eventBus可以实现对象间的通信，核心的两个方法是触发事件和监听事件，jquery中是<code>on</code>和<code>trigger</code>；vue中的是 <code>$on</code>和 <code>$emit</code>；<br>
+使用步骤是：</p>
+<ol>
+<li>创建拥有on和trigger的对象，<code>$(window)</code>  <code>new Vue()</code></li>
+<li>在对象a中设定， 数据变化的时候用 trigger 触发自定义事件 myEvent，</li>
+<li>在对象b中，用 on 监听 myEvent 的触发，这样对象b就可以知道对象a的数据改变了，从而执行相应操作</li>
+</ol>
+<h2 id="表驱动编程">表驱动编程</h2>
+<p>代码中的类似重复的代码，或者处理一些有映射关系的数据，可以使用表驱动编程<br>
+把代码中不同的地方提取出来，用一种数据结构去表示，一般是数组或者哈希表<br>
+最后就是遍历这个表，这样减少了代码重复，结构也更加清晰</p>
+<h2 id="模块化">模块化</h2>
+<p>我理解的模块化是 把功能独立的应用或代码段单独封装起来。<br>
+可以封装成一个对象，可以抽象出一个类，也可以写到单独的文件，通过暴露接口给别人调用。 <br>
+我们常说的模块化应该只是指分成不同的文件，然后各个模块利用接口相互连接起来。</p>
+<p> <br>
+模块化之后，代码的结构更加清晰，维护的时候，问题定位也更方便。<br>
+每个模块都有一个独立的作用域，不会污染全局变量。 <br>
+模块化注重代码高内聚、低耦合，这样代码的复用性才高。<br>
+模块化利用npm和yarn可以很方便管理依赖包。</p>
+<p> <br>
+模块的调用链过长会增加维护难度<br>
+模块间通信较耗费性能</p>
+</div>
         <div class="post_footer">
           
         </div>

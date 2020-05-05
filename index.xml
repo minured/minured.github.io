@@ -17,7 +17,7 @@
       <pubDate>Tue, 05 May 2020 12:44:43 +0800</pubDate>
       
       <guid>https://minured.top/posts/%E6%B5%85%E6%9E%90mvc/</guid>
-      <description></description>
+      <description>MVC M 指的是Model，用来存放数据 V 指的是View，是用户视图层，前端中指的是html和DOM C 指的是Controller，用来存放控制逻辑 实际应用中，这三个部分常常有交叉的地方，有时候很难分清楚是属</description>
     </item>
     
     <item>
