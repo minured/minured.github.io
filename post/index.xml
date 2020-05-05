@@ -6,10 +6,19 @@
     <description>Recent content in Posts on minu前端学习记录</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 29 Apr 2020 00:06:01 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2020 12:44:43 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>浅析MVC</title>
+      <link>http://localhost:1313/post/%E6%B5%85%E6%9E%90mvc/</link>
+      <pubDate>Tue, 05 May 2020 12:44:43 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E6%B5%85%E6%9E%90mvc/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>JS重难点笔记</title>

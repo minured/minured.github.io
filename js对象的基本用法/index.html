@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-cn" >
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  
+  <meta name="author"
+        content="minured"/>
+
+  
+  <meta name="description" content="创建对象 let obj = { &amp;quot;name&amp;quot;:&amp;quot;minu&amp;quot;, age:18 } let obj = new Object({ &amp;quot;name&amp;quot;:&amp;quot;minu&amp;quot;, age:18 }) 删除对象属性 delete obj.age obj.age = undefined 不能删除属性，只能让其属性值变成undefined 查看对象属性 obj.name 或者 obj[&amp;quot;name&amp;quot;] 查看name的值，name是字符串 Object.keys(obj) 查看obj的所有key Object.values(obj) 查看obj"/>
+  
+
+  
+  
+  <meta name="keywords" content="html, css, js"/>
+  
+
+  
+  <link rel="canonical" href="https://minured.top/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/"/>
+
+  
+
+  <title>JS对象的基本用法 &middot; 前端笔记</title>
+
+  <link rel="shortcut icon" href="https://minured.top/images/favicon.ico"/>
+  <link rel="stylesheet" href="https://minured.top/css/animate.min.css"/>
+  <link rel="stylesheet" href="https://minured.top/css/remixicon.css"/>
+  <link rel="stylesheet" href="https://minured.top/css/zozo.css"/>
+  <link rel="stylesheet" href="https://minured.top/css/highlight.css"/>
+
+  
+  
+</head>
+
+<body>
+<div class="main animated">
+  <div class="nav_container animated fadeInDown">
+  <div class="site_nav" id="site_nav">
+    <ul>
+      
+      <li>
+        <a href="/">首页</a>
+      </li>
+      
+      <li>
+        <a href="/posts/">归档</a>
+      </li>
+      
+      <li>
+        <a href="/tags/">标签</a>
+      </li>
+      
+      <li>
+        <a href="/about/">关于</a>
+      </li>
+      
+    </ul>
+  </div>
+  <div class="menu_icon">
+    <a id="menu_icon"><i class="remixicon-links-line"></i></a>
+  </div>
+</div>
+
+  <div class="header animated fadeInDown">
+  <div class="site_title_container">
+    <div class="site_title">
+      <h1>
+        <a href="https://minured.top">
+          <span>前端笔记</span>
+          <img src="https://minured.top/images/logo.svg"/>
+        </a>
+      </h1>
+    </div>
+    <div class="description">
+      <p class="sub_title"></p>
+      <div class="my_socials">
+        
+        
+        <a href="https://github.com/minured" title="github" target="_blank"><i class="remixicon-github-fill"></i></a>
+        
+        
+        <a href="https://minured.top/index.xml" type="application/rss+xml" title="rss" target="_blank"><i class="remixicon-rss-fill"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="content">
+    <div class="post_page">
+      <div class="post animated fadeInDown">
+        <div class="post_title post_detail_title">
+          <h2><a href='/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/'>JS对象的基本用法</a></h2>
+          <span class="date">2020.04.04</span>
+        </div>
+        <div class="post_content markdown"><h2 id="创建对象">创建对象</h2>
+<ol>
+<li>
+<pre><code>let obj = {
+     &quot;name&quot;:&quot;minu&quot;,
+     age:18
+ }
+</code></pre></li>
+<li>
+<pre><code>let obj = new Object({
+     &quot;name&quot;:&quot;minu&quot;, 
+     age:18
+ })
+</code></pre></li>
+</ol>
+<h2 id="删除对象属性">删除对象属性</h2>
+<ul>
+<li><code>delete obj.age</code></li>
+<li><code>obj.age = undefined</code> 不能删除属性，只能让其属性值变成undefined</li>
+</ul>
+<h2 id="查看对象属性">查看对象属性</h2>
+<ul>
+<li><code>obj.name</code> 或者 <code>obj[&quot;name&quot;]</code> 查看name的值，<strong>name是字符串</strong></li>
+<li><code>Object.keys(obj)</code> 查看obj的所有key</li>
+<li><code>Object.values(obj)</code> 查看obj的所有值</li>
+<li><code>Object.entries(obj)</code> 同时查看键和值</li>
+<li><code>console.dir(obj)</code> 查看自身属性和原型属性</li>
+<li>chrome中使用<code>obj.__proto__</code>或者<code>Object.prototype</code>查看对象的原型，第一种是chrome写法，第二种是官方写法</li>
+<li></li>
+</ul>
+<h2 id="修改和增加对象属性">修改和增加对象属性</h2>
+<ul>
+<li>修改name的值：<br>
+<code>obj.name = &quot;new name&quot;</code>、<code>obj[&quot;name&quot;] = &quot;new name&quot;</code>、<code>let obj = {name: &quot;new name&quot;}</code></li>
+<li>批量添加或修改：<br>
+<code>Object.assign(obj, {age: 18, gender : &quot;M})</code></li>
+<li>修改原型的属性：
+<ol>
+<li><code>obj.toString = &quot;new toString</code> 只会在obj自身创建同名的toString属性，不会修改原型。</li>
+<li><code>object.__proto__.toString = &quot;xxx&quot;</code>或者<code>Object.prototype.toString = &quot;xxx&quot;</code>会修改原型的toString方法</li>
+<li><code>let obj2 = {};obj.__proto__ = obj2;</code>
+会修改obj.__proto__指向为obj2，obj2.__proto__指向原型，obj.toString依然可以调用根原型的toString方法。</li>
+<li><code>let obj3 = Object.create(obj2)</code> 在创建的时候指定原型。</li>
+</ol>
+</li>
+</ul>
+<h2 id="name-in-obj-和-hasownpropertyname的区别">&ldquo;name&rdquo; in obj 和 hasOwnProperty(&ldquo;name&rdquo;)的区别</h2>
+<ul>
+<li><code>&quot;name&quot; in obj</code> 查找范围是自身以及其原型, 其中一个地方有都会返回true</li>
+<li><code>obj.hasOwnProperty(&quot;name&quot;)</code> 查找范围是对象自身。</li>
+</ul>
+<h2 id="要点">要点：</h2>
+<ul>
+<li><strong>对象的键是字符串</strong></li>
+<li>原型也有原型，是null，<code>Object.prototype.__proto__</code></li>
+</ul>
+</div>
+        <div class="post_footer">
+          
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
+</div>
+<footer class="footer">
+  <div class="powered_by">
+    <a href="https://zeuk.me">Designed by Zeuk,</a>
+    <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+  </div>
+
+  <div class="footer_slogan">
+    <span></span>
+  </div>
+</footer>
+
+
+
+<script src="https://minured.top/js/jquery-3.3.1.min.js"></script>
+<script src="https://minured.top/js/zozo.js"></script>
+<script src="https://minured.top/js/highlight.pack.js"></script>
+<link  href="https://minured.top/css/fancybox.min.css" rel="stylesheet">
+<script src="https://minured.top/js/fancybox.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad()</script>
+
+
+  <script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+
+
+
+
+</body>
+</html>

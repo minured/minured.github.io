@@ -1,35 +1,140 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 前端学习记录</title>
-    <link>http://example.org/posts/</link>
-    <description>Recent content in Posts on 前端学习记录</description>
+    <title>Posts on 前端笔记</title>
+    <link>https://minured.top/posts/</link>
+    <description>Recent content in Posts on 前端笔记</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-Hans</language>
-    <lastBuildDate>Thu, 12 Mar 2020 21:03:56 +0800</lastBuildDate>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 05 May 2020 12:44:43 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://minured.top/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>test 第二篇文章</title>
-      <link>http://example.org/posts/test/</link>
-      <pubDate>Thu, 12 Mar 2020 21:03:56 +0800</pubDate>
+      <title>浅析MVC</title>
+      <link>https://minured.top/posts/%E6%B5%85%E6%9E%90mvc/</link>
+      <pubDate>Tue, 05 May 2020 12:44:43 +0800</pubDate>
       
-      <guid>http://example.org/posts/test/</guid>
-      <description>今天我寒夜里看雪飘过，怀着冷却了的心窝飘远方!!!!
-console.log(&amp;quot;hello world&amp;quot;); </description>
+      <guid>https://minured.top/posts/%E6%B5%85%E6%9E%90mvc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JS重难点笔记</title>
+      <link>https://minured.top/posts/js%E9%87%8D%E9%9A%BE%E7%82%B9%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 29 Apr 2020 00:06:01 +0800</pubDate>
+      
+      <guid>https://minured.top/posts/js%E9%87%8D%E9%9A%BE%E7%82%B9%E7%AC%94%E8%AE%B0/</guid>
+      <description>闭包 什么是闭包 在嵌套函数中，子函数访问了父函数的变量就形成了闭包 闭包应该就是指子函数与父函数变量之间引用关系，只要函数对变量的引用还在，该变量就不会被回收，即使父函数已执行完毕 let addOne = (() =&amp;gt; { let a = 0 return ()</description>
+    </item>
+    
+    <item>
+      <title>Flex基本用法</title>
+      <link>https://minured.top/posts/flex%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Fri, 17 Apr 2020 10:39:51 +0800</pubDate>
+      
+      <guid>https://minured.top/posts/flex%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</guid>
+      <description>flex布局的两个概念,一个是父容器 container,一个是直接子元素 items 父容器的属性 display: flex 变成flex布局 flex-direction: row/ column/ row-reverse/ column-reverse改变items流动方向 flex-wrap: wrap/ wrap-reverse 换行,默认不换行 主轴items</description>
+    </item>
+    
+    <item>
+      <title>JQuery的基本使用</title>
+      <link>https://minured.top/posts/jquery%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Thu, 16 Apr 2020 22:53:12 +0800</pubDate>
+      
+      <guid>https://minured.top/posts/jquery%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</guid>
+      <description>jQuery 如何获取元素 jQuery获取元素是通过调用DOM原生的querySelectorAll()，这样就可以用css选择器来获取元素，比如： $(&#39;input[name=first]&#39;) 选择name=first的input元素 然后jQuery还加入</description>
+    </item>
+    
+    <item>
+      <title>JS对象的基本用法</title>
+      <link>https://minured.top/posts/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Sat, 04 Apr 2020 23:07:31 +0800</pubDate>
+      
+      <guid>https://minured.top/posts/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</guid>
+      <description>创建对象 let obj = { &amp;quot;name&amp;quot;:&amp;quot;minu&amp;quot;, age:18 } let obj = new Object({ &amp;quot;name&amp;quot;:&amp;quot;minu&amp;quot;, age:18 }) 删除对象属性 delete obj.age obj.age = undefined 不能删除属性，只能让其属性值变成undefined 查看对象属性 obj.name 或者 obj[&amp;quot;name&amp;quot;] 查看name的值，name是字符串 Object.keys(obj) 查看obj的所有key Object.values(obj) 查看obj</description>
+    </item>
+    
+    <item>
+      <title>JS基本语法</title>
+      <link>https://minured.top/posts/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Sat, 04 Apr 2020 20:46:22 +0800</pubDate>
+      
+      <guid>https://minured.top/posts/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</guid>
+      <description>表达式和语句 表达式一般都会有值，如 2 + 3 //5， 5就是该语句计算出来的值；console.log(3) //3 打印 3 是函数执行的效果，值是函数的返回值 undefined。 语句可能有值也可能没有，语句一般会改</description>
+    </item>
+    
+    <item>
+      <title>JavaScript的诞生</title>
+      <link>https://minured.top/posts/javascript%E7%9A%84%E8%AF%9E%E7%94%9F/</link>
+      <pubDate>Mon, 30 Mar 2020 19:43:38 +0800</pubDate>
+      
+      <guid>https://minured.top/posts/javascript%E7%9A%84%E8%AF%9E%E7%94%9F/</guid>
+      <description>1. 1994 年底，网景公司发布了 navigator 0.9 版本，迅速占领市场，轰动一时。 2. 但是当时的浏览器只能看，并不能跟访问者交互。网景需一种网页脚本语言，使得浏览器可以与网页互动，当时网景有两个选择，一个是采用现有的语言，一个</description>
+    </item>
+    
+    <item>
+      <title>CSS知识总结</title>
+      <link>https://minured.top/posts/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Sun, 29 Mar 2020 21:05:37 +0800</pubDate>
+      
+      <guid>https://minured.top/posts/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</guid>
+      <description>浏览器的渲染原理 渲染流程: 根据 html 生成 DOM 节点树 根据 CSS 生成 CSSOM 合并 html 和 CSS，生成待渲染的树 layout 确定布局，计算大小和位置 paint 绘制上色、阴影等 composite 合并图层，根据层叠关系展示画面 画面更新流程： 1、layout =&amp;gt; paint =&amp;gt; composite</description>
+    </item>
+    
+    <item>
+      <title>浅析URL</title>
+      <link>https://minured.top/posts/%E6%B5%85%E6%9E%90url/</link>
+      <pubDate>Thu, 26 Mar 2020 21:13:15 +0800</pubDate>
+      
+      <guid>https://minured.top/posts/%E6%B5%85%E6%9E%90url/</guid>
+      <description>1、URL的组成 uniform resource locator 统一资源定位符 协议：规定了客户端与服务器通讯的协议 域名或者ip：指定了服务器的网络位置 端口：指定了服务器提供的哪种服务，默认http为80，https为443 路径：指定了要访问的</description>
+    </item>
+    
+    <item>
+      <title>HTML常用标签</title>
+      <link>https://minured.top/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Tue, 17 Mar 2020 22:55:00 +0800</pubDate>
+      
+      <guid>https://minured.top/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</guid>
+      <description>a 标签 作用 anchor 用于超链接，跳转外部页面，跳转内部锚点（#id），跳转邮箱或电话等（mailto:xx@xx.xx;tel:12345678910） 属性 href 1、使用无协议写法href = &amp;quot;//goo</description>
+    </item>
+    
+    <item>
+      <title>3月17复习</title>
+      <link>https://minured.top/posts/3.17%E5%A4%8D%E4%B9%A0/</link>
+      <pubDate>Tue, 17 Mar 2020 21:49:24 +0800</pubDate>
+      
+      <guid>https://minured.top/posts/3.17%E5%A4%8D%E4%B9%A0/</guid>
+      <description>文件的增删改查 1、文件的查看 ~ 表示用户目录 . 表示当前目录 .. 表示上级目录 / 代表根目录 pwd 查看当前目录（process word directory 进程目录） ls 显示当前目录的所有文件（ls 路径） ls -1 每行显示一个 ls -a 显示所有文件，包括</description>
+    </item>
+    
+    <item>
+      <title>Html入门笔记1</title>
+      <link>https://minured.top/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</link>
+      <pubDate>Sat, 14 Mar 2020 22:54:16 +0800</pubDate>
+      
+      <guid>https://minured.top/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</guid>
+      <description>html 是谁发明的 HTML（Hypertext Marked Language，超文本标记语言）是由 Web 的发明者 Tim Berners-Lee 和同事 Daniel W. Connolly 于 1990 年创立的一种标记语言，它是标准通用化标记语言 SGML 的应用。 html 起手式应该写什么 &amp;lt;!-- 文档类型 --&amp;gt; &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;!--</description>
+    </item>
+    
+    <item>
+      <title>如何用hugo搭建个人博客</title>
+      <link>https://minured.top/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Thu, 12 Mar 2020 23:21:23 +0800</pubDate>
+      
+      <guid>https://minured.top/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>下面是windows用户hugo搭建博客的步骤： 1. 安装hugo windows用户直接下载压缩包，解压缩之后把hugo的目录添加到环境变量 2. 创建本地站点 hugo new site myblog 3. 下载主题 使用git下载一个默认主题 ananke cd myblog</description>
     </item>
     
     <item>
       <title>开博大吉</title>
-      <link>http://example.org/posts/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</link>
+      <link>https://minured.top/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</link>
       <pubDate>Thu, 12 Mar 2020 17:01:17 +0800</pubDate>
       
-      <guid>http://example.org/posts/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</guid>
-      <description>以后我会在这里记录前端学习的心得
-多做总结，才会进步
-好嗨哟 </description>
+      <guid>https://minured.top/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</guid>
+      <description>以后我会在这里记录前端学习的心得 多做总结，才会进步 好嗨哟</description>
     </item>
     
   </channel>

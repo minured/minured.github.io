@@ -1,128 +1,98 @@
-<?xml-stylesheet type="text/xsl" href="http://localhost:1313/sitemap.xsl"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://localhost:1313/about/</loc>
-    <lastmod>2017-08-28T21:41:52+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://minured.top/posts/</loc>
+    <lastmod>2020-05-05T12:44:43+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/js%E9%87%8D%E9%9A%BE%E7%82%B9%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://minured.top/</loc>
+    <lastmod>2020-05-05T12:44:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minured.top/posts/%E6%B5%85%E6%9E%90mvc/</loc>
+    <lastmod>2020-05-05T12:44:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minured.top/posts/js%E9%87%8D%E9%9A%BE%E7%82%B9%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2020-04-29T00:06:01+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2020-04-29T00:06:01+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/post/flex%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</loc>
+    <loc>https://minured.top/posts/flex%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</loc>
     <lastmod>2020-04-17T10:39:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/jquery%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</loc>
+    <loc>https://minured.top/posts/jquery%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2020-04-16T22:53:12+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</loc>
+    <loc>https://minured.top/posts/js%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</loc>
     <lastmod>2020-04-04T23:07:31+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</loc>
+    <loc>https://minured.top/posts/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</loc>
     <lastmod>2020-04-04T20:46:22+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/javascript%E7%9A%84%E8%AF%9E%E7%94%9F/</loc>
+    <loc>https://minured.top/posts/javascript%E7%9A%84%E8%AF%9E%E7%94%9F/</loc>
     <lastmod>2020-03-30T19:43:38+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</loc>
+    <loc>https://minured.top/posts/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2020-03-29T21:05:37+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/%E6%B5%85%E6%9E%90url/</loc>
+    <loc>https://minured.top/posts/%E6%B5%85%E6%9E%90url/</loc>
     <lastmod>2020-03-26T21:13:15+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</loc>
+    <loc>https://minured.top/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</loc>
     <lastmod>2020-03-17T22:55:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/3.17%E5%A4%8D%E4%B9%A0/</loc>
+    <loc>https://minured.top/posts/3.17%E5%A4%8D%E4%B9%A0/</loc>
     <lastmod>2020-03-17T21:49:24+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</loc>
+    <loc>https://minured.top/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</loc>
     <lastmod>2020-03-14T22:54:16+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>https://minured.top/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2020-03-12T23:21:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</loc>
+    <loc>https://minured.top/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</loc>
     <lastmod>2020-03-12T17:01:17+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2017-08-28T21:41:52+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://minured.top/about/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://minured.top/categories/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://minured.top/tags/</loc>
   </url>
   
 </urlset>

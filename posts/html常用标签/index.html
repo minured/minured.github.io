@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-cn" >
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  
+  <meta name="author"
+        content="minured"/>
+
+  
+  <meta name="description" content="a 标签 作用 anchor 用于超链接，跳转外部页面，跳转内部锚点（#id），跳转邮箱或电话等（mailto:xx@xx.xx;tel:12345678910） 属性 href 1、使用无协议写法href = &amp;quot;//goo"/>
+  
+
+  
+  
+  <meta name="keywords" content="html, css, js"/>
+  
+
+  
+  <link rel="canonical" href="https://minured.top/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/"/>
+
+  
+
+  <title>HTML常用标签 &middot; 前端笔记</title>
+
+  <link rel="shortcut icon" href="https://minured.top/images/favicon.ico"/>
+  <link rel="stylesheet" href="https://minured.top/css/animate.min.css"/>
+  <link rel="stylesheet" href="https://minured.top/css/remixicon.css"/>
+  <link rel="stylesheet" href="https://minured.top/css/zozo.css"/>
+  <link rel="stylesheet" href="https://minured.top/css/highlight.css"/>
+
+  
+  
+</head>
+
+<body>
+<div class="main animated">
+  <div class="nav_container animated fadeInDown">
+  <div class="site_nav" id="site_nav">
+    <ul>
+      
+      <li>
+        <a href="/">首页</a>
+      </li>
+      
+      <li>
+        <a href="/posts/">归档</a>
+      </li>
+      
+      <li>
+        <a href="/tags/">标签</a>
+      </li>
+      
+      <li>
+        <a href="/about/">关于</a>
+      </li>
+      
+    </ul>
+  </div>
+  <div class="menu_icon">
+    <a id="menu_icon"><i class="remixicon-links-line"></i></a>
+  </div>
+</div>
+
+  <div class="header animated fadeInDown">
+  <div class="site_title_container">
+    <div class="site_title">
+      <h1>
+        <a href="https://minured.top">
+          <span>前端笔记</span>
+          <img src="https://minured.top/images/logo.svg"/>
+        </a>
+      </h1>
+    </div>
+    <div class="description">
+      <p class="sub_title"></p>
+      <div class="my_socials">
+        
+        
+        <a href="https://github.com/minured" title="github" target="_blank"><i class="remixicon-github-fill"></i></a>
+        
+        
+        <a href="https://minured.top/index.xml" type="application/rss+xml" title="rss" target="_blank"><i class="remixicon-rss-fill"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="content">
+    <div class="post_page">
+      <div class="post animated fadeInDown">
+        <div class="post_title post_detail_title">
+          <h2><a href='/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/'>HTML常用标签</a></h2>
+          <span class="date">2020.03.17</span>
+        </div>
+        <div class="post_content markdown"><h2 id="a-标签">a 标签</h2>
+<h3 id="作用">作用</h3>
+<p>anchor 用于超链接，跳转外部页面，跳转内部锚点（#id），跳转邮箱或电话等（mailto:xx@xx.xx;tel:12345678910）</p>
+<h3 id="属性">属性</h3>
+<ul>
+<li>
+<p>href</p>
+<p>1、使用无协议写法<code>href = &quot;//google.com&quot;</code>，协议会继承自当前网页协议。</p>
+<p>2、使用路径的时候，<code>/</code>指的是 http 开启位置的根目录</p>
+<p>3、使用伪协议<code>href = &quot;javascript:;</code>屏蔽 a 标签的默认跳转行为，可以用来触发其他操作</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>target</p>
+<p>1、<code>_blank</code> 新标签打开</p>
+<p>2、<code>iframe</code> 已经很多使用(<code>_top</code> 在最外层窗口打开，<code>_parent</code> 在父窗口打开，<code>_self</code> 在当前窗口打开)</p>
+</li>
+<li>
+<p>rel</p>
+<p>1、用于指定当前文档与被链接文档之间的关系</p>
+<p>2、<code>rel = noopener</code>：但 a 标签使用<code>target = _blank</code>时，新标签可以通过<code>window.opener</code>访问原标签，原标签可能会被改变；使用了<code>rel = noopener</code>就可以阻止<code>window.opener</code>，不能进行跨窗口访问。</p>
+</li>
+</ul>
+<h2 id="img-标签">img 标签</h2>
+<p>发出 get 请求，显示一张图片</p>
+<h3 id="属性-1">属性</h3>
+<ul>
+<li><code>alt</code> 图片加载失败时显示的文字</li>
+<li><code>height、width</code>指定图片宽高，指定其中一个的时候，另一个会按比例自适应，这两个是 img 的属性，不是 CSS，注意区别</li>
+<li><code>src</code> 图片的地址</li>
+</ul>
+<h3 id="事件">事件</h3>
+<ul>
+<li>onload 图片加载成功的时候触发</li>
+<li>onerror 图片加载失败的时候触发，图片加载失败时，可以用其他图片来代替，以提升用户体验</li>
+</ul>
+<h3 id="响应式">响应式</h3>
+<ul>
+<li><code>max-width:100%</code>最大宽度为窗口的宽度，实现响应式的显示。</li>
+</ul>
+<h3 id="可替换元素">可替换元素</h3>
+<p>replaced element 是一种外部对象，CSS 只能控制其位置，不能控制其内容。
+常见的可替换元素有<code>iframe</code>、<code>video</code>、<code>embed</code>、<code>img</code>。</p>
+<h2 id="table-标签">table 标签</h2>
+<ul>
+<li>table 只能写三个直接子标签<code>thead</code>、<code>tbody</code>、<code>tfoot</code>，下一级是<code>tr</code>，再下一级是<code>th</code>、<code>td</code></li>
+<li>做表格应该一行一行写</li>
+<li>表格一般写这两行去除默认的样式：<code>border-collapse:collapse</code>合并相邻的边框;<code>border-spacing:0</code>边框的间隔为零。</li>
+<li><code>table-layout</code>指定表格行列的大小的算法</li>
+</ul>
+<h3 id="感想">感想</h3>
+<p>标签太多了，要多练习运用才能记得住，不然隔一段时间就会忘记，特别是 input 标签的类型很多，应该每个都写一个实例帮助记忆。</p>
+</div>
+        <div class="post_footer">
+          
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
+</div>
+<footer class="footer">
+  <div class="powered_by">
+    <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+  </div>
+
+  <div class="footer_slogan">
+    <span></span>
+  </div>
+</footer>
+
+
+
+<script src="https://minured.top/js/jquery-3.3.1.min.js"></script>
+<script src="https://minured.top/js/zozo.js"></script>
+<script src="https://minured.top/js/highlight.pack.js"></script>
+<link  href="https://minured.top/css/fancybox.min.css" rel="stylesheet">
+<script src="https://minured.top/js/fancybox.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad()</script>
+
+
+  <script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+
+
+
+
+</body>
+</html>

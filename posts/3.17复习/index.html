@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-cn" >
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  
+  <meta name="author"
+        content="minured"/>
+
+  
+  <meta name="description" content="文件的增删改查 1、文件的查看 ~ 表示用户目录 . 表示当前目录 .. 表示上级目录 / 代表根目录 pwd 查看当前目录（process word directory 进程目录） ls 显示当前目录的所有文件（ls 路径） ls -1 每行显示一个 ls -a 显示所有文件，包括"/>
+  
+
+  
+  
+  <meta name="keywords" content="html, css, js"/>
+  
+
+  
+  <link rel="canonical" href="https://minured.top/posts/3.17%E5%A4%8D%E4%B9%A0/"/>
+
+  
+
+  <title>3月17复习 &middot; 前端笔记</title>
+
+  <link rel="shortcut icon" href="https://minured.top/images/favicon.ico"/>
+  <link rel="stylesheet" href="https://minured.top/css/animate.min.css"/>
+  <link rel="stylesheet" href="https://minured.top/css/remixicon.css"/>
+  <link rel="stylesheet" href="https://minured.top/css/zozo.css"/>
+  <link rel="stylesheet" href="https://minured.top/css/highlight.css"/>
+
+  
+  
+</head>
+
+<body>
+<div class="main animated">
+  <div class="nav_container animated fadeInDown">
+  <div class="site_nav" id="site_nav">
+    <ul>
+      
+      <li>
+        <a href="/">首页</a>
+      </li>
+      
+      <li>
+        <a href="/posts/">归档</a>
+      </li>
+      
+      <li>
+        <a href="/tags/">标签</a>
+      </li>
+      
+      <li>
+        <a href="/about/">关于</a>
+      </li>
+      
+    </ul>
+  </div>
+  <div class="menu_icon">
+    <a id="menu_icon"><i class="remixicon-links-line"></i></a>
+  </div>
+</div>
+
+  <div class="header animated fadeInDown">
+  <div class="site_title_container">
+    <div class="site_title">
+      <h1>
+        <a href="https://minured.top">
+          <span>前端笔记</span>
+          <img src="https://minured.top/images/logo.svg"/>
+        </a>
+      </h1>
+    </div>
+    <div class="description">
+      <p class="sub_title"></p>
+      <div class="my_socials">
+        
+        
+        <a href="https://github.com/minured" title="github" target="_blank"><i class="remixicon-github-fill"></i></a>
+        
+        
+        <a href="https://minured.top/index.xml" type="application/rss+xml" title="rss" target="_blank"><i class="remixicon-rss-fill"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="content">
+    <div class="post_page">
+      <div class="post animated fadeInDown">
+        <div class="post_title post_detail_title">
+          <h2><a href='/posts/3.17%E5%A4%8D%E4%B9%A0/'>3月17复习</a></h2>
+          <span class="date">2020.03.17</span>
+        </div>
+        <div class="post_content markdown"><h3 id="文件的增删改查">文件的增删改查</h3>
+<p>1、文件的查看</p>
+<ul>
+<li><code>~</code> 表示用户目录</li>
+<li><code>.</code> 表示当前目录</li>
+<li><code>..</code> 表示上级目录</li>
+<li><code>/</code> 代表根目录</li>
+<li><code>pwd</code> 查看当前目录（process word directory 进程目录）</li>
+<li><code>ls</code> 显示当前目录的所有文件（ls 路径）</li>
+<li><code>ls -1</code> 每行显示一个</li>
+<li><code>ls -a</code> 显示所有文件，包括隐藏文件</li>
+<li><code>ls -l</code> 查看文件的详细信息，还可以写为 <code>ll</code></li>
+<li><code>cat</code> 显示文件的内容</li>
+<li><code>less</code> 分页显示文件内容</li>
+<li><code>head</code> 默认显示文件内容的前十行，可以添加参数 <code>-n 8</code>显示文件的前 8 行</li>
+<li><code>tail</code> 同理 head 显示内容的后十行
+2、文件的增加</li>
+<li><code>touch</code> 如果文件不存在，新建一个文件；如果文件存在，则刷新文件的最后更新时间</li>
+<li><code>echo</code> 向文件写入内容， <code>&gt;</code> 覆盖写入；<code>&gt;&gt;</code> 追加写入</li>
+<li><code>mkdir</code> 创建文件夹，如果文件夹存在，则会失败</li>
+</ul>
+<h3 id="不熟练的知识点">不熟练的知识点</h3>
+<ul>
+<li>
+<p><code>mv</code> 除了移动文件，还可以重命名文件</p>
+</li>
+<li>
+<p><code>ls --help</code> 查看帮助，其他命令同理</p>
+</li>
+<li>
+<p><code>echo $?</code> 查看上一个命令命令执行的结果，一般 0 是成功，1 是失败</p>
+</li>
+<li>
+<p>bash 中，<code>alt + .</code> 输入上次输入的内容</p>
+</li>
+<li>
+<p>把命令写到一个文件当中，然后<code>sh mybash</code>就可以指执行 mybash，文件中，还可以使用$1、$2、$3 来传参</p>
+</li>
+<li>
+<p><code>npm cnpm npx yarn</code> 都是包管理工具，用来管理 js 的代码库</p>
+</li>
+<li>
+<p>使用 git 的步骤，先六条命令配置 git（包括邮箱、用户名、默认编辑器等等），然后 git init 初始化，git add ,git commit, 初次提交绑定远程仓库 git remote origin add xxx；git -u origin master</p>
+</li>
+<li>
+<p>git reflog 查看详细记录</p>
+</li>
+<li>
+<p>git reset &ndash;hard xxx 版本切换</p>
+</li>
+<li>
+<p>git branch x 创建 x 分支</p>
+</li>
+<li>
+<p>git checkout x 切换 x 分支</p>
+</li>
+<li>
+<p>git pull 是将远程仓库的改动下载到本地仓库</p>
+</li>
+<li>
+<p>git merge 合并分支</p>
+</li>
+<li>
+<p>ssh-keygen -t rsa -b 4096 就可以在本地创建公钥和私钥，把公钥添加到 github 就可以通过 ssh 访问远程仓库，</p>
+</li>
+</ul>
+</div>
+        <div class="post_footer">
+          
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
+</div>
+<footer class="footer">
+  <div class="powered_by">
+    <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+  </div>
+
+  <div class="footer_slogan">
+    <span></span>
+  </div>
+</footer>
+
+
+
+<script src="https://minured.top/js/jquery-3.3.1.min.js"></script>
+<script src="https://minured.top/js/zozo.js"></script>
+<script src="https://minured.top/js/highlight.pack.js"></script>
+<link  href="https://minured.top/css/fancybox.min.css" rel="stylesheet">
+<script src="https://minured.top/js/fancybox.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad()</script>
+
+
+  <script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+
+
+
+
+</body>
+</html>

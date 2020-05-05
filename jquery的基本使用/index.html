@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-cn" >
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  
+  <meta name="author"
+        content="minured"/>
+
+  
+  <meta name="description" content="jQuery 如何获取元素 jQuery获取元素是通过调用DOM原生的querySelectorAll()，这样就可以用css选择器来获取元素，比如： $(&#39;input[name=first]&#39;) 选择name=first的input元素 然后jQuery还加入"/>
+  
+
+  
+  
+  <meta name="keywords" content="html, css, js"/>
+  
+
+  
+  <link rel="canonical" href="https://minured.top/jquery%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
+
+  
+
+  <title>JQuery的基本使用 &middot; 前端笔记</title>
+
+  <link rel="shortcut icon" href="https://minured.top/images/favicon.ico"/>
+  <link rel="stylesheet" href="https://minured.top/css/animate.min.css"/>
+  <link rel="stylesheet" href="https://minured.top/css/remixicon.css"/>
+  <link rel="stylesheet" href="https://minured.top/css/zozo.css"/>
+  <link rel="stylesheet" href="https://minured.top/css/highlight.css"/>
+
+  
+  
+</head>
+
+<body>
+<div class="main animated">
+  <div class="nav_container animated fadeInDown">
+  <div class="site_nav" id="site_nav">
+    <ul>
+      
+      <li>
+        <a href="/">首页</a>
+      </li>
+      
+      <li>
+        <a href="/posts/">归档</a>
+      </li>
+      
+      <li>
+        <a href="/tags/">标签</a>
+      </li>
+      
+      <li>
+        <a href="/about/">关于</a>
+      </li>
+      
+    </ul>
+  </div>
+  <div class="menu_icon">
+    <a id="menu_icon"><i class="remixicon-links-line"></i></a>
+  </div>
+</div>
+
+  <div class="header animated fadeInDown">
+  <div class="site_title_container">
+    <div class="site_title">
+      <h1>
+        <a href="https://minured.top">
+          <span>前端笔记</span>
+          <img src="https://minured.top/images/logo.svg"/>
+        </a>
+      </h1>
+    </div>
+    <div class="description">
+      <p class="sub_title"></p>
+      <div class="my_socials">
+        
+        
+        <a href="https://github.com/minured" title="github" target="_blank"><i class="remixicon-github-fill"></i></a>
+        
+        
+        <a href="https://minured.top/index.xml" type="application/rss+xml" title="rss" target="_blank"><i class="remixicon-rss-fill"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="content">
+    <div class="post_page">
+      <div class="post animated fadeInDown">
+        <div class="post_title post_detail_title">
+          <h2><a href='/jquery%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/'>JQuery的基本使用</a></h2>
+          <span class="date">2020.04.16</span>
+        </div>
+        <div class="post_content markdown"><h2 id="jquery-如何获取元素">jQuery 如何获取元素</h2>
+<ol>
+<li>
+<p>jQuery获取元素是通过调用DOM原生的<code>querySelectorAll()</code>，这样就可以用css选择器来获取元素，比如：<br>
+<code>$('input[name=first]')</code>  选择name=first的input元素</p>
+</li>
+<li>
+<p>然后jQuery还加入了其特有的表达式，包括：</p>
+</li>
+</ol>
+<blockquote>
+<p><code>$('tr: odd')</code>   选择表格的奇数行<br>
+<code>$('div: gt(2)')</code>    选择所有的div元素，除了前三个<br>
+<code>$('div: animated')</code>    选择当前处于动画状态的div元素</p>
+</blockquote>
+<ol start="3">
+<li>jQuery加入了过滤器筛选结果，包括属性过滤、位置过滤、父子兄弟选择等</li>
+</ol>
+<blockquote>
+<p><code>$('div').has('p')</code>    选择包含p元素的div元素<br>
+<code>$('div').not('.myClass')</code>   选择class不等于myClass的div元素<br>
+<code>$('div').filter('.myClass')</code>   选择class等于myClass的div元素<br>
+<code>$('div').eq(5)</code>   选择第6个div元素</p>
+</blockquote>
+<ol start="4">
+<li>jQuery选择元素的结果，默认是伪数组的形式存在，默认对结果集的全部元素应用操作</li>
+</ol>
+<h2 id="jquery-的链式操作是怎样的">jQuery 的链式操作是怎样的</h2>
+<p>每次执行函数操作之后, 返回当前对象, 这样可以通过<code>.</code>继续操作当前对象, 可以将一串操作连在一起。<br>
+当操作的元素改变的时候, 返回一个新对象$(newEl)，两个对象操作的元素不会相互污染<br>
+同时jQuery还提供了一个.end()方法， 返回上一级结果集</p>
+<h2 id="jquery-如何创建元素">jQuery 如何创建元素</h2>
+<p>使用template，template标签是不会被浏览器渲染的，但是它可以把html字符串变成dom节点
+字符串放到template标签里之后，再通过template.content获取</p>
+<pre><code>let container = document.createElement(&quot;template&quot;)
+container.innerHTML = &quot;&lt;div&gt;&lt;/div&gt;&quot;
+let new_div = container.content.firstChild
+</code></pre><h2 id="jquery-如何移动元素">jQuery 如何移动元素</h2>
+<p><code>$('div').insertAfter($('p'))</code> 把div元素移动到p元素的后面,并返回<code>$('div)</code><br>
+<code>$('p').after($('div'))</code> 效果同上把,把p元素放到div元素的前面, 返回<code>$('p')</code></p>
+<p><strong>谁调用就返回谁</strong></p>
+<ul>
+<li>外部, 插入兄弟元素:</li>
+</ul>
+<ol>
+<li><code>$移动元素.insertAfter($参照元素)</code> \ <code>$参照元素.after($移动元素)</code></li>
+<li><code>$p_before.insertBefore($p_after)</code> \ <code>$p_after.before($p_before)</code></li>
+</ol>
+<ul>
+<li>内部, 插入子元素:</li>
+</ul>
+<ol>
+<li><code>$child.appendTo($parent)</code> \ <code>$parent.append($child)</code>   在内部的最后插入子元素</li>
+<li><code>$child.prependTo($parent)</code> \ <code>$parent.prepend()</code>  在内部的前面插入子元素</li>
+</ol>
+<h2 id="jquery-如何修改元素的属性">jQuery 如何修改元素的属性</h2>
+<p>jQuery的获取和修改属性是用同一个函数的， 通过判断参数的个数来实现不同的操作<br>
+一般不传参数就是读取该属性的值， 默认读取结果集的第一个元素的属性值。（.text()例外，它取出所有元素的text内容）<br>
+常用的有： <code>.html() .text() .attr() .width() .height() .val()</code><br>
+注意改变style使用.css()<br>
+<code>$p.css(&quot;color&quot;)</code> 获取color<br>
+<code>$p.css(&quot;color&quot;, &quot;red&quot;)</code>  设置color</p>
+<p>批量设置:</p>
+<pre><code>$p.css({
+    &quot;color&quot;: &quot;red&quot;, 
+    &quot;fontSize&quot;: &quot;20px&quot;
+})```  </code></pre></div>
+        <div class="post_footer">
+          
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
+</div>
+<footer class="footer">
+  <div class="powered_by">
+    <a href="https://zeuk.me">Designed by Zeuk,</a>
+    <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+  </div>
+
+  <div class="footer_slogan">
+    <span></span>
+  </div>
+</footer>
+
+
+
+<script src="https://minured.top/js/jquery-3.3.1.min.js"></script>
+<script src="https://minured.top/js/zozo.js"></script>
+<script src="https://minured.top/js/highlight.pack.js"></script>
+<link  href="https://minured.top/css/fancybox.min.css" rel="stylesheet">
+<script src="https://minured.top/js/fancybox.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad()</script>
+
+
+  <script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+
+
+
+
+</body>
+</html>

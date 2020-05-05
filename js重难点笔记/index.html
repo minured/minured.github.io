@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-cn" >
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  
+  <meta name="author"
+        content="minured"/>
+
+  
+  <meta name="description" content="闭包 什么是闭包 在嵌套函数中，子函数访问了父函数的变量就形成了闭包 闭包应该就是指子函数与父函数变量之间引用关系，只要函数对变量的引用还在，该变量就不会被回收，即使父函数已执行完毕 let addOne = (() =&amp;gt; { let a = 0 return ()"/>
+  
+
+  
+  
+  <meta name="keywords" content="html, css, js"/>
+  
+
+  
+  <link rel="canonical" href="https://minured.top/js%E9%87%8D%E9%9A%BE%E7%82%B9%E7%AC%94%E8%AE%B0/"/>
+
+  
+
+  <title>JS重难点笔记 &middot; 前端笔记</title>
+
+  <link rel="shortcut icon" href="https://minured.top/images/favicon.ico"/>
+  <link rel="stylesheet" href="https://minured.top/css/animate.min.css"/>
+  <link rel="stylesheet" href="https://minured.top/css/remixicon.css"/>
+  <link rel="stylesheet" href="https://minured.top/css/zozo.css"/>
+  <link rel="stylesheet" href="https://minured.top/css/highlight.css"/>
+
+  
+  
+</head>
+
+<body>
+<div class="main animated">
+  <div class="nav_container animated fadeInDown">
+  <div class="site_nav" id="site_nav">
+    <ul>
+      
+      <li>
+        <a href="/">首页</a>
+      </li>
+      
+      <li>
+        <a href="/posts/">归档</a>
+      </li>
+      
+      <li>
+        <a href="/tags/">标签</a>
+      </li>
+      
+      <li>
+        <a href="/about/">关于</a>
+      </li>
+      
+    </ul>
+  </div>
+  <div class="menu_icon">
+    <a id="menu_icon"><i class="remixicon-links-line"></i></a>
+  </div>
+</div>
+
+  <div class="header animated fadeInDown">
+  <div class="site_title_container">
+    <div class="site_title">
+      <h1>
+        <a href="https://minured.top">
+          <span>前端笔记</span>
+          <img src="https://minured.top/images/logo.svg"/>
+        </a>
+      </h1>
+    </div>
+    <div class="description">
+      <p class="sub_title"></p>
+      <div class="my_socials">
+        
+        
+        <a href="https://github.com/minured" title="github" target="_blank"><i class="remixicon-github-fill"></i></a>
+        
+        
+        <a href="https://minured.top/index.xml" type="application/rss+xml" title="rss" target="_blank"><i class="remixicon-rss-fill"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="content">
+    <div class="post_page">
+      <div class="post animated fadeInDown">
+        <div class="post_title post_detail_title">
+          <h2><a href='/js%E9%87%8D%E9%9A%BE%E7%82%B9%E7%AC%94%E8%AE%B0/'>JS重难点笔记</a></h2>
+          <span class="date">2020.04.29</span>
+        </div>
+        <div class="post_content markdown"><h2 id="闭包">闭包</h2>
+<h3 id="什么是闭包">什么是闭包</h3>
+<p>在嵌套函数中，子函数访问了父函数的变量就形成了闭包<br>
+闭包应该就是指子函数与父函数变量之间引用关系，只要函数对变量的引用还在，该变量就不会被回收，即使父函数已执行完毕</p>
+<pre><code>let addOne = (() =&gt; {
+    let a = 0
+    return () =&gt; {console.log(++a)}
+})()
+addOne()    // 1
+addOne()    // 2
+</code></pre><h3 id="闭包的用途">闭包的用途</h3>
+<ol>
+<li>使得变量不会被回收，比如计数器、缓存</li>
+<li>函数外部可以访问和修改函数内部变量，实现封装</li>
+<li>通过返回的函数/对象作为对外接口，模拟一般面向对象语言中“类”的私有属性</li>
+</ol>
+<h3 id="闭包的缺点">闭包的缺点</h3>
+<ol>
+<li>函数的变量会一直保存在内存中，滥用闭包会耗费内存</li>
+<li>函数外部能够轻易改变内部的变量</li>
+</ol>
+<h2 id="call-apply-bind">call apply bind</h2>
+<h3 id="call">call</h3>
+<p>call可以在调用函数的时候，手动指定this，<code>fn.call(this, arg1, arg2, ...)</code><br>
+可以用来实现继承</p>
+<pre><code>function People(name, age) {
+    this.name = name
+    this.age =age
+}
+function Student(name, age, teacher) {
+    People.call(this, name, age)
+    this.teacher = teacher
+}
+let minu = new Student(&quot;minu&quot;, 18, &quot;frankfang&quot;)
+console.log(minu)   //  {&quot;name&quot;: &quot;minu&quot;, &quot;age&quot;: 18, &quot;teacher&quot;: &quot;frankfang&quot; }
+</code></pre><h3 id="apply">apply</h3>
+<p>apply() 的语法和作用 与 call() 类似，唯一的区别是 call()接受的是一个参数列表，apply()接受的是一个参数的数组（或者伪数组）
+<code>apply(this, [arg1, arg2, ...])</code></p>
+<h3 id="bind">bind</h3>
+<p>在创建函数的时候调用bind()，函数的this被指定为bind()的第一个参数，不论怎么调用，this不变；也可以指定函数的初始参数
+<code>let newFn = fn.bind(this, arg1, arg2, ...)</code>
+用法：</p>
+<ol>
+<li>在创建函数的时候，this绑定为原始对象</li>
+</ol>
+<pre><code>let module = {
+    x:81,
+    getX(){
+        console.log(this.x)
+    }
+}
+let boundGetX = module.getX.bind(module)
+boundGetX()    // 81
+</code></pre><ol start="2">
+<li>指定初始参数</li>
+</ol>
+<pre><code>function printArguments() {
+    console.log(arguments)
+}
+let defaultArg1 = printArguments.bind(null, 666)
+defaultArg1(1, 2, 3)    // [666, 1, 2, 3, length...]
+</code></pre><h2 id="http状态码">http状态码</h2>
+<ol>
+<li>100  Continue，临时响应，内容正常可行，客户端应该继续发送请求</li>
+<li>200  OK， 响应成功</li>
+<li>201  Create， 请求已经成功，并因此创建一个新的资源。这通常是在POST请求，或者是某些PUT请求之后返回的响应。</li>
+<li>202  Accepted， 服务器已收到请求，但未响应。</li>
+<li>301 Moved Permanently，所请求的URI资源路径已经改变，新的URL会在响应的Location:头字段里找到。</li>
+<li>400 Bad Request， 请求有误</li>
+<li>401 Unauthorized， 当前请求需要用户验证</li>
+<li>404 Not Found，请求资源找不到</li>
+<li>500 Internal Server Error，服务器遇到了不知道如何处理的情况</li>
+<li>502 Bad Gateway，服务器作为网关需要得到一个处理这个请求的响应，但是得到一个错误的响应。</li>
+</ol>
+<h2 id="数组去重">数组去重</h2>
+<pre><code>let newArr = Array.from(new Set([1,5,2,3,4,2,3,1,3,4]))
+console.log(newArr)
+</code></pre><hr>
+<pre><code>let arr = [1,5,2,3,4,2,3,1,3,4]
+let newArr = []
+arr.forEach((item) =&gt; {
+    if (newArr.indexOf(item) &lt; 0) {
+        newArr.push(item)
+    }
+})
+console.log(newArr)
+</code></pre><hr>
+<p>Map对象的key是唯一的</p>
+<pre><code>let arr = [1,5,2,3,4,2,3,1,3,4]
+let map = new Map()
+arr.forEach((item) =&gt; {
+    map.set(item)
+})
+let newArr = []
+for (let key of map.keys()) {
+    newArr.push(key)
+}
+console.log(newArr)
+</code></pre><h2 id="事件相关">事件相关</h2>
+<h3 id="事件委托">事件委托</h3>
+<p>事件委托利用了事件冒泡的特性，将元素本身的事件监听 委托给父元素，可以通过event.target来查看事件是从哪个子元素冒上来的</p>
+<pre><code>ul.onclick = (e) =&gt; {
+    e.target.style.display = &quot;none&quot; 
+}
+</code></pre><h2 id="阻止默认动作">阻止默认动作</h2>
+<p><code>event.preventDefault()</code></p>
+<h3 id="阻止事件冒泡">阻止事件冒泡</h3>
+<p><code>event.stopPropagation()</code></p>
+<h2 id="js继承">JS继承</h2>
+<h3 id="原型">原型</h3>
+<p>原型是JS不同对象之间构成关联的核心所在
+es6之前，JS的继承主要有两种方法，一是通过指定子类的原型为父类的原型，它的实例就可以通过__proto__访问原型属性；二是子类调用父类构造函数，通过call来指定this</p>
+<pre><code>构造函数的继承：
+function People(name) {
+    this.name = name
+}
+People.prototype.sayHi = function(){console.log(`Hi, I'm ${this.name}`)}
+
+function Student(name, teacher){
+    People.call(this, name, teacher)   //继承父类的属性
+    this.teacher = teacher
+}
+Student.prototype = Object.create(People.prototype)   //复制父类prototype达到继承父类原型
+Student.prototype.constructor = Student     // 修正子类的构造函数
+let s1 = new Student(&quot;minu&quot;, &quot;fang&quot;)
+s1.sayHi()
+</code></pre><h3 id="class">class</h3>
+<p>js的继承骨子里就是基于原型的，可以认为class是一个prototype的语法糖<br>
+class中使用extends来实现继承，通过super()来调用父类的构造方法
+语法：</p>
+<pre><code>class People {
+    constructor(name){
+        this.name = name
+    }
+    sayHi(){
+        console.log(`Hi, I'm ${this.name}`)
+    }
+}
+class Student extends People {
+    constructor(name, teacher){
+        super(name)
+        this.teacher = teacher
+    }
+}
+let s1 = new Student(&quot;minu&quot;, &quot;fang&quot;)
+s1.sayHi()
+</code></pre><h2 id="promise">Promise</h2>
+<ol start="0">
+<li>
+<p>Promise用于异步任务中，设定结果成功或者失败的不同执行函数</p>
+</li>
+<li>
+<p><code>let p1 = new Promise((resolve, reject) =&gt; { })</code></p>
+</li>
+<li>
+<p><code>.then(onFulfilled, onRejected)</code> 接受两个函数，都是可选的；</p>
+</li>
+</ol>
+<p>成功执行onFulfilled，失败执行onRejected；</p>
+<p>失败也可以用.catch(onRejected)；</p>
+<p>then()和catch()都返回一个promise对象，可以链式调用；</p>
+<p>链式调用时，then()里面应该返回一个值，给下一个then()的回调函数用。</p>
+<ol start="3">
+<li>Promise.all(iterable) 接受一个可迭代对象，将多个结果合成一个Promise对象；</li>
+</ol>
+<p>如果所有的结果都是 resolve 那执行resolve的回调，并把每个item的结果以数组形式传给resolve；</p>
+<p>只要一个失败，那就reject， 并把出错的那个item的结果传给reject</p>
+<ol start="4">
+<li>Promise.race(iterable)  也是接受一个数组，那个快就返回那个的结果，不论resolve还是reject</li>
+</ol>
+<p>嗨呀，好乱啊，: )</p>
+<h2 id="跨域">跨域</h2>
+<ol>
+<li>源：协议 + 域名 + 端口 ，两个源一模一样就是同源</li>
+<li>跨域是不同源的页面之间相互访问</li>
+<li>JSONP跨域  是把数据写入js文件当中，然后通过script标签来获取数据，一般是把数据传给回调函数的方式来读取数据<br>
+JSONP支持IE，JSONP不能获取http状态码，不支持POST</li>
+<li>CORS 是服务器通过在响应头设置允许访问的白名单来达到跨域，<code>Access-Control-Allow-Origin: xxx.com</code></li>
+</ol>
+</div>
+        <div class="post_footer">
+          
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
+</div>
+<footer class="footer">
+  <div class="powered_by">
+    <a href="https://zeuk.me">Designed by Zeuk,</a>
+    <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+  </div>
+
+  <div class="footer_slogan">
+    <span></span>
+  </div>
+</footer>
+
+
+
+<script src="https://minured.top/js/jquery-3.3.1.min.js"></script>
+<script src="https://minured.top/js/zozo.js"></script>
+<script src="https://minured.top/js/highlight.pack.js"></script>
+<link  href="https://minured.top/css/fancybox.min.css" rel="stylesheet">
+<script src="https://minured.top/js/fancybox.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad()</script>
+
+
+  <script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+
+
+
+
+</body>
+</html>

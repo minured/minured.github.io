@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-cn" >
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  
+  <meta name="author"
+        content="minured"/>
+
+  
+  <meta name="description" content="1. 1994 年底，网景公司发布了 navigator 0.9 版本，迅速占领市场，轰动一时。 2. 但是当时的浏览器只能看，并不能跟访问者交互。网景需一种网页脚本语言，使得浏览器可以与网页互动，当时网景有两个选择，一个是采用现有的语言，一个"/>
+  
+
+  
+  
+  <meta name="keywords" content="html, css, js"/>
+  
+
+  
+  <link rel="canonical" href="https://minured.top/posts/javascript%E7%9A%84%E8%AF%9E%E7%94%9F/"/>
+
+  
+
+  <title>JavaScript的诞生 &middot; 前端笔记</title>
+
+  <link rel="shortcut icon" href="https://minured.top/images/favicon.ico"/>
+  <link rel="stylesheet" href="https://minured.top/css/animate.min.css"/>
+  <link rel="stylesheet" href="https://minured.top/css/remixicon.css"/>
+  <link rel="stylesheet" href="https://minured.top/css/zozo.css"/>
+  <link rel="stylesheet" href="https://minured.top/css/highlight.css"/>
+
+  
+  
+</head>
+
+<body>
+<div class="main animated">
+  <div class="nav_container animated fadeInDown">
+  <div class="site_nav" id="site_nav">
+    <ul>
+      
+      <li>
+        <a href="/">首页</a>
+      </li>
+      
+      <li>
+        <a href="/posts/">归档</a>
+      </li>
+      
+      <li>
+        <a href="/tags/">标签</a>
+      </li>
+      
+      <li>
+        <a href="/about/">关于</a>
+      </li>
+      
+    </ul>
+  </div>
+  <div class="menu_icon">
+    <a id="menu_icon"><i class="remixicon-links-line"></i></a>
+  </div>
+</div>
+
+  <div class="header animated fadeInDown">
+  <div class="site_title_container">
+    <div class="site_title">
+      <h1>
+        <a href="https://minured.top">
+          <span>前端笔记</span>
+          <img src="https://minured.top/images/logo.svg"/>
+        </a>
+      </h1>
+    </div>
+    <div class="description">
+      <p class="sub_title"></p>
+      <div class="my_socials">
+        
+        
+        <a href="https://github.com/minured" title="github" target="_blank"><i class="remixicon-github-fill"></i></a>
+        
+        
+        <a href="https://minured.top/index.xml" type="application/rss+xml" title="rss" target="_blank"><i class="remixicon-rss-fill"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="content">
+    <div class="post_page">
+      <div class="post animated fadeInDown">
+        <div class="post_title post_detail_title">
+          <h2><a href='/posts/javascript%E7%9A%84%E8%AF%9E%E7%94%9F/'>JavaScript的诞生</a></h2>
+          <span class="date">2020.03.30</span>
+        </div>
+        <div class="post_content markdown"><p><strong>1.</strong> 1994 年底，网景公司发布了 navigator 0.9 版本，迅速占领市场，轰动一时。</p>
+<p><strong>2.</strong> 但是当时的浏览器只能看，并不能跟访问者交互。网景需一种网页脚本语言，使得浏览器可以与网页互动，当时网景有两个选择，一个是采用现有的语言，一个是发明一种新的语言。</p>
+<p><strong>3.</strong> 1995 年 sun 公司正式推出 Java，声称这种语言可以“一次编写，到处运行”。</p>
+<p><strong>4.</strong> 网景看中了 Java，并和 sun 公司勾搭，允许 Java 以 applet（小程序）的形式在浏览器中运行，还考虑将 Java 作为脚本语言嵌入网页中，但这会使得 html 过于复杂，这时网景内部产生激烈的争论。</p>
+<p><strong>5.</strong> 1995 年 4 月，网景招募了 Brendan Eich，为的是把 Scheme 语言嵌入浏览器当中。</p>
+<p><strong>6.</strong> 一个月之后，网景最后决定要发明一种新的脚本语言，并且新语言“看上去与 Java 足够相似”。同月，Brendan Eich 仅花了十天就把新语言的原型设计出来了。</p>
+<p><strong>7.</strong> 新语言最初被命名为 Mocha，1995 年 9 月改名为 LiveScript，同年 12 月，网景为了蹭 Java 的热度，在新语言将要部署的时候，将其改名为 JavaScript。</p>
+<p><strong>8.</strong> JavaScript 推出后大获成功，不久后，微软在 Internet Explorer 3 推出了 JScript，与网景的 JavaScript 双峰对峙。</p>
+<p><strong>9.</strong> 1996 年 11 月，网景向 ECMA 提交语言标准，ECMA 以 JavaScript 语言为基础制定了 ECMAScript 标准规范 ECMA-262</p>
+<p><strong>最后</strong>，JavaScript 的诞生经历使得它充满妥协与缺陷。<br>
+设计者布莱登其实对 Java 并不感兴趣，十天完成原型设计只是为了完成公司的任务，新语言缺少了一些对细节的考虑。<br>
+网景为了确立其 JS 的地位，早早向 ECMA 提交标准，相比于 C 语言问世近 20 年才发布国际标准，JS 推出一年半就确立标准，确实显得太过仓促。<br>
+但是，随着新标准的发布和借助一些第三方的帮助，只要我们好好遵守代码规范，大部分缺陷都可以回避。</p>
+</div>
+        <div class="post_footer">
+          
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
+</div>
+<footer class="footer">
+  <div class="powered_by">
+    <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+  </div>
+
+  <div class="footer_slogan">
+    <span></span>
+  </div>
+</footer>
+
+
+
+<script src="https://minured.top/js/jquery-3.3.1.min.js"></script>
+<script src="https://minured.top/js/zozo.js"></script>
+<script src="https://minured.top/js/highlight.pack.js"></script>
+<link  href="https://minured.top/css/fancybox.min.css" rel="stylesheet">
+<script src="https://minured.top/js/fancybox.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad()</script>
+
+
+  <script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+
+
+
+
+</body>
+</html>

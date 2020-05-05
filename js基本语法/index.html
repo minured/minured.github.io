@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-cn" >
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  
+  <meta name="author"
+        content="minured"/>
+
+  
+  <meta name="description" content="表达式和语句 表达式一般都会有值，如 2 &#43; 3 //5， 5就是该语句计算出来的值；console.log(3) //3 打印 3 是函数执行的效果，值是函数的返回值 undefined。 语句可能有值也可能没有，语句一般会改"/>
+  
+
+  
+  
+  <meta name="keywords" content="html, css, js"/>
+  
+
+  
+  <link rel="canonical" href="https://minured.top/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
+
+  
+
+  <title>JS基本语法 &middot; 前端笔记</title>
+
+  <link rel="shortcut icon" href="https://minured.top/images/favicon.ico"/>
+  <link rel="stylesheet" href="https://minured.top/css/animate.min.css"/>
+  <link rel="stylesheet" href="https://minured.top/css/remixicon.css"/>
+  <link rel="stylesheet" href="https://minured.top/css/zozo.css"/>
+  <link rel="stylesheet" href="https://minured.top/css/highlight.css"/>
+
+  
+  
+</head>
+
+<body>
+<div class="main animated">
+  <div class="nav_container animated fadeInDown">
+  <div class="site_nav" id="site_nav">
+    <ul>
+      
+      <li>
+        <a href="/">首页</a>
+      </li>
+      
+      <li>
+        <a href="/posts/">归档</a>
+      </li>
+      
+      <li>
+        <a href="/tags/">标签</a>
+      </li>
+      
+      <li>
+        <a href="/about/">关于</a>
+      </li>
+      
+    </ul>
+  </div>
+  <div class="menu_icon">
+    <a id="menu_icon"><i class="remixicon-links-line"></i></a>
+  </div>
+</div>
+
+  <div class="header animated fadeInDown">
+  <div class="site_title_container">
+    <div class="site_title">
+      <h1>
+        <a href="https://minured.top">
+          <span>前端笔记</span>
+          <img src="https://minured.top/images/logo.svg"/>
+        </a>
+      </h1>
+    </div>
+    <div class="description">
+      <p class="sub_title"></p>
+      <div class="my_socials">
+        
+        
+        <a href="https://github.com/minured" title="github" target="_blank"><i class="remixicon-github-fill"></i></a>
+        
+        
+        <a href="https://minured.top/index.xml" type="application/rss+xml" title="rss" target="_blank"><i class="remixicon-rss-fill"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="content">
+    <div class="post_page">
+      <div class="post animated fadeInDown">
+        <div class="post_title post_detail_title">
+          <h2><a href='/js%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/'>JS基本语法</a></h2>
+          <span class="date">2020.04.04</span>
+        </div>
+        <div class="post_content markdown"><h2 id="表达式和语句">表达式和语句</h2>
+<ul>
+<li>表达式一般都会有值，如 <code>2 + 3    //5</code>， 5就是该语句计算出来的值；<code>console.log(3)  //3</code>   打印 3 是函数执行的效果，值是函数的返回值 undefined。</li>
+<li>语句可能有值也可能没有，语句一般会改变环境（声明、赋值），如 <code>var a = 1;</code>，该语句的值为返回值 undefined。</li>
+<li>上面并不绝对，个人理解是表达式会产生一个值，语句是执行一个行为</li>
+</ul>
+<h2 id="标识符的规则">标识符的规则</h2>
+<p>JS中所有可以由我们自主命名的都可以称为标识符，如变量名、函数名，命名的时候要遵守命名规则:</p>
+<ul>
+<li>由unicode字母、$、_和数字组成，不能以数字开头，中文也是合法标识符</li>
+<li>不能是es中的关键字和保留字</li>
+<li>一般采用驼峰命名法 <code>getImg</code> <code>myFunc</code></li>
+</ul>
+<h2 id="if-else-语句">if else 语句</h2>
+<p>语法：</p>
+<pre><code>let a = 5;
+if (a%2 === 0) {
+    console.log(&quot;a是偶数&quot;)
+}
+else {
+    console.log(&quot;a是奇数&quot;)
+}
+</code></pre><p>要点：
+如果省略 {}，if只会管到条件之后的第一句。</p>
+<pre><code>let a = 5;
+if (a &gt; 10)
+    console.log(&quot;a大于10&quot;);
+    console.log(&quot;哈哈哈&quot;);
+
+//哈哈哈
+</code></pre><p>不推荐省略 {}，要简写可用 <code>条件?成立执行语句:不成立执行语句</code></p>
+<h2 id="while和for语句">while和for语句</h2>
+<p>语法：
+while(条件){语句} 语句中一般要添加条件的增量，防止死循环<br>
+for循环被认为是while循环语法的语法糖。<br>
+？ 语法糖？听过不少，但是一直不知道是什么。。。</p>
+<blockquote>
+<p>语法糖（Syntactic sugar），也译为糖衣语法，是由英国计算机科学家彼得·约翰·兰达（Peter J. Landin）发明的一个术语，指计算机语言中添加的某种语法，这种语法对语言的功能并没有影响，但是更方便程序员使用。通常来说使用语法糖能够增加程序的可读性，从而减少程序代码出错的机会。</p>
+</blockquote>
+<p>语法，for遍历数组：</p>
+<pre><code>let arr =[];
+for (let i = 0, i &lt; arr.length, i++){
+    console.log(arr[i]);
+}
+</code></pre><p>要点：</p>
+<p>for (var i = 0, ,)里面setTimeout的话，把for循环完之后，再去执行setTimeout的回调函数。用let不会。</p>
+<h2 id="break和continue">break和continue</h2>
+<p><code>break</code>和<code>continue</code>都是作用于上一级直接父层，break退出整个父层循环，continue退出本次循环流程，开始下一次。<br>
+注意：
+switch要记得break，当然有时候也不使用break，来达到判断多个条件同时成立的效果。</p>
+<h2 id="label">label</h2>
+<p>语法：
+<code>label1 : { console.log(&quot;this is a label.&quot;); }</code>javascript</p>
+<blockquote>
+<p>label 与 break、continue配合使用，主要应用在循环结构、多分支结构中，以便跳出内层嵌套体。</p>
+</blockquote>
+<p>要点：<br>
+<code>{ foo : 1 }</code>javascript<br>
+在chrome会被认为是对象，在firefox会被认为是标签。</p>
+<p><code>{ foo : 1; }</code>javascript
+在chrome中被认为是标签。</p>
+<h2 id="js要点">JS要点：</h2>
+<ul>
+<li>JS 大小写敏感</li>
+<li>JS中只要不影响断句，多余的空格不会影响执行，一般为了代码可读性，符号前后添加空格</li>
+<li><code>a &amp;&amp; b &amp;&amp; c</code> 取第一个假值或者最后一个值 c，<code>a || b || c</code>取第一个真值或者最后一个值 c。</li>
+<li>return不能回车，如果接了回车，JS会自以为是的在后面加<code>;</code>，返回undefined</li>
+<li>不要滥用注释，注意把坑标注</li>
+<li>JS的精度问题，<code>0.1 + 0.2 !== 0.3</code>，到底是什么问题，我现在也说不清楚，好像是关系到进制和存储的问题，这里只做个记录。
+<blockquote>
+<p>对于像0.1这样的数值用二进制表示你就会发现无法整除，最后算下来会是 0.000110011&hellip;.由于存储空间有限，最后计算机会舍弃后面的数值，所以我们最后就只能得到一个近似值。</p>
+</blockquote>
+</li>
+</ul>
+</div>
+        <div class="post_footer">
+          
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
+</div>
+<footer class="footer">
+  <div class="powered_by">
+    <a href="https://zeuk.me">Designed by Zeuk,</a>
+    <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+  </div>
+
+  <div class="footer_slogan">
+    <span></span>
+  </div>
+</footer>
+
+
+
+<script src="https://minured.top/js/jquery-3.3.1.min.js"></script>
+<script src="https://minured.top/js/zozo.js"></script>
+<script src="https://minured.top/js/highlight.pack.js"></script>
+<link  href="https://minured.top/css/fancybox.min.css" rel="stylesheet">
+<script src="https://minured.top/js/fancybox.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad()</script>
+
+
+  <script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+
+
+
+
+</body>
+</html>
