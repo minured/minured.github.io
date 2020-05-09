@@ -6,10 +6,19 @@
     <description>Recent content on 前端笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 05 May 2020 12:44:43 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2020 23:57:12 +0800</lastBuildDate>
     
 	<atom:link href="https://minured.top/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>初识Vue</title>
+      <link>https://minured.top/posts/%E5%88%9D%E8%AF%86vue/</link>
+      <pubDate>Sat, 09 May 2020 23:57:12 +0800</pubDate>
+      
+      <guid>https://minured.top/posts/%E5%88%9D%E8%AF%86vue/</guid>
+      <description>Vue 的两个版本 完整版： vue.js（包含注释，开发使用） vue.mini.js(代码压缩，生产使用) 非完整版： vue.runtime.js 和 vue.runtime.mini.js 区别: Vue 完整版，包含 compiler，会自动编译 html 模板，体积大。 runtime 版本，需要手动 ren</description>
+    </item>
     
     <item>
       <title>浅析MVC</title>

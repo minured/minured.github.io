@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn" >
 <head>
-	<meta name="generator" content="Hugo 0.67.0" />
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -11,7 +10,7 @@
         content="minured"/>
 
   
-  <meta name="description" content="Hugo theme zozo example site."/>
+  <meta name="description" content="Vue 的两个版本 完整版： vue.js（包含注释，开发使用） vue.mini.js(代码压缩，生产使用) 非完整版： vue.runtime.js 和 vue.runtime.mini.js 区别: Vue 完整版，包含 compiler，会自动编译 html 模板，体积大。 runtime 版本，需要手动 ren"/>
   
 
   
@@ -20,13 +19,11 @@
   
 
   
-  <link rel="canonical" href="https://minured.top/"/>
+  <link rel="canonical" href="https://minured.top/posts/%E5%88%9D%E8%AF%86vue/"/>
 
   
-  <link rel="alternate" type="application/rss&#43;xml" href="https://minured.top/index.xml">
-  
 
-  <title>前端笔记</title>
+  <title>初识Vue &middot; 前端笔记</title>
 
   <link rel="shortcut icon" href="https://minured.top/images/favicon.ico"/>
   <link rel="stylesheet" href="https://minured.top/css/animate.min.css"/>
@@ -92,39 +89,51 @@
 </div>
 
   <div class="content">
-    
-
-
-<div class="post animated fadeInDown">
-  <div class="post_title">
-    <h2><a href='/posts/'>Posts</a></h2>
-  </div>
-  
-  <div class="list">
-    <div class="post_content markdown">
-      <p>......</p>
-    </div>
-  </div>
-  
-  <div class="post_footer">
-    <div class="meta">
-      <div class="info">
-        <span class="field">
-          <i class="remixicon-map-pin-time-line"></i>
+    <div class="post_page">
+      <div class="post animated fadeInDown">
+        <div class="post_title post_detail_title">
+          <h2><a href='/posts/%E5%88%9D%E8%AF%86vue/'>初识Vue</a></h2>
           <span class="date">2020.05.09</span>
-        </span>
-        
+        </div>
+        <div class="post_content markdown"><h2 id="vue-的两个版本">Vue 的两个版本</h2>
+<ol>
+<li>完整版： vue.js（包含注释，开发使用） vue.mini.js(代码压缩，生产使用)</li>
+<li>非完整版： vue.runtime.js 和 vue.runtime.mini.js</li>
+</ol>
+<p>区别:<br>
+Vue 完整版，包含 compiler，会自动编译 html 模板，体积大。<br>
+runtime 版本，需要手动 render，通过 vue-loader 把 html 模板变成 js 函数 h，传入<code>render(h){h(demo)}</code>。优势：在 build 的时候就编译好，浏览器不需要 compiler，只要调用 h 函数，就能生成 html。</p>
+<h2 id="template-和-render">template 和 render</h2>
+<ul>
+<li>template 可以写在 vue 组件里面<code>&lt;template&gt;&lt;/template&gt;</code>， 或者作为对象的 key 传入 vue 的构造函数。 内容是 html 的模板字符串，可以使用 vue 的语法: <code>{{n}}</code>、<code>@click=&quot;add&quot;</code></li>
+<li>render 是 runtime 版的手动渲染函数，接受一个渲染函数 h，h 的参数是一个 vue 组件的对象，通过执行 h，就可以生成 html。
+<pre><code>import demo from &quot;./demo.vue&quot;
+new Vue({
+    render(h){
+        h(demo)
+    }
+})
+</code></pre></li>
+</ul>
+<h2 id="使用-codesandbox-写-vue-项目">使用 codesandbox 写 Vue 项目</h2>
+<ol>
+<li>打开<a href="https://codesandbox.io/">codesandbox.io</a></li>
+<li>不要登录，只要不登录就可以一直白嫖</li>
+<li>点击 <code>Create a Sandbox</code> 创建项目</li>
+<li>选择 Vue 模板</li>
+<li>稍等片刻，可以看到生成一个 Vue 的 demo</li>
+<li>完成开发之后，通过左上角 file 菜单的 export to zip 下载压缩包</li>
+</ol>
+</div>
+        <div class="post_footer">
+          
+        </div>
       </div>
+      
+      
     </div>
   </div>
-</div>
-
-
-<div class="pagination">
-  
-</div>
-
-  </div>
+  <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
 </div>
 <footer class="footer">
   <div class="powered_by">
