@@ -6,10 +6,19 @@
     <description>Recent content on 前端笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 09 May 2020 23:57:12 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2020 21:04:27 +0800</lastBuildDate>
     
 	<atom:link href="https://minured.top/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>sync修饰符的使用</title>
+      <link>https://minured.top/posts/sync%E4%BF%AE%E9%A5%B0%E7%AC%A6%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Fri, 15 May 2020 21:04:27 +0800</pubDate>
+      
+      <guid>https://minured.top/posts/sync%E4%BF%AE%E9%A5%B0%E7%AC%A6%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>.sync 修饰符的作用是，子组件改变了一个 props 的值，然后父组件也会同步更新这个变化。 使用方法： 父组件调用子组件，在传递 props 的时候，添加.sync 修饰符 &amp;lt;Child :prop1.sync = &amp;quot;parent_data&amp;quot;/&amp;gt; 子组件在修改 prop1 的之后，使用 this.$emit 来触发一个自定义事件，事件</description>
+    </item>
     
     <item>
       <title>初识Vue</title>

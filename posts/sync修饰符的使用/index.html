@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn" >
 <head>
-	<meta name="generator" content="Hugo 0.67.0" />
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -11,7 +10,7 @@
         content="minured"/>
 
   
-  <meta name="description" content="Hugo theme zozo example site."/>
+  <meta name="description" content=".sync 修饰符的作用是，子组件改变了一个 props 的值，然后父组件也会同步更新这个变化。 使用方法： 父组件调用子组件，在传递 props 的时候，添加.sync 修饰符 &amp;lt;Child :prop1.sync = &amp;quot;parent_data&amp;quot;/&amp;gt; 子组件在修改 prop1 的之后，使用 this.$emit 来触发一个自定义事件，事件"/>
   
 
   
@@ -20,13 +19,11 @@
   
 
   
-  <link rel="canonical" href="https://minured.top/"/>
+  <link rel="canonical" href="https://minured.top/posts/sync%E4%BF%AE%E9%A5%B0%E7%AC%A6%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
 
   
-  <link rel="alternate" type="application/rss&#43;xml" href="https://minured.top/index.xml">
-  
 
-  <title>前端笔记</title>
+  <title>sync修饰符的使用 &middot; 前端笔记</title>
 
   <link rel="shortcut icon" href="https://minured.top/images/favicon.ico"/>
   <link rel="stylesheet" href="https://minured.top/css/animate.min.css"/>
@@ -92,39 +89,37 @@
 </div>
 
   <div class="content">
-    
-
-
-<div class="post animated fadeInDown">
-  <div class="post_title">
-    <h2><a href='/posts/'>Posts</a></h2>
-  </div>
-  
-  <div class="list">
-    <div class="post_content markdown">
-      <p>......</p>
-    </div>
-  </div>
-  
-  <div class="post_footer">
-    <div class="meta">
-      <div class="info">
-        <span class="field">
-          <i class="remixicon-map-pin-time-line"></i>
+    <div class="post_page">
+      <div class="post animated fadeInDown">
+        <div class="post_title post_detail_title">
+          <h2><a href='/posts/sync%E4%BF%AE%E9%A5%B0%E7%AC%A6%E7%9A%84%E4%BD%BF%E7%94%A8/'>sync修饰符的使用</a></h2>
           <span class="date">2020.05.15</span>
-        </span>
-        
+        </div>
+        <div class="post_content markdown"><p>.sync 修饰符的作用是，子组件改变了一个 props 的值，然后父组件也会同步更新这个变化。</p>
+<p>使用方法：</p>
+<ol>
+<li>父组件调用子组件，在传递 props 的时候，添加.sync 修饰符</li>
+</ol>
+<pre><code>&lt;Child :prop1.sync = &quot;parent_data&quot;/&gt;
+</code></pre><ol start="2">
+<li>子组件在修改 prop1 的之后，使用 this.$emit 来触发一个自定义事件，事件名格式为 <code>update:xxx</code>，并把修改后的值放到$emit 的第二个参数</li>
+</ol>
+<pre><code>&lt;button @click = &quot;$emit('update:prop1', prop1 + 1)&quot;&gt;修改prop1&lt;/button&gt;
+</code></pre><ol start="3">
+<li>这样，当子组件修改了 prop1，该数据的变化也会同步更新到父组件</li>
+</ol>
+<p>.sync 是一个语法糖，实质上它会被扩展为一个 v-on 监听器，父组件通过$event 来拿到子组件传过来的参数，并赋值给原 data。</p>
+<pre><code>&lt;Child :prop1=&quot;parent_data&quot; v-on:update:prop1 = &quot;parent_data = $event&quot; /&gt;
+</code></pre></div>
+        <div class="post_footer">
+          
+        </div>
       </div>
+      
+      
     </div>
   </div>
-</div>
-
-
-<div class="pagination">
-  
-</div>
-
-  </div>
+  <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
 </div>
 <footer class="footer">
   <div class="powered_by">
